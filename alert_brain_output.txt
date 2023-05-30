@@ -1,0 +1,1769 @@
+C:\Users\jayaanan\Python37\python.exe C:\Users\jayaanan\PycharmProjects\Alpha3\alert_brain.py 
+[[23  5  0 16  1]
+ [ 0 27  0  0  0]
+ [ 0  0 33  0  2]
+ [ 0  0  0 25  0]
+ [ 0  0  0  1 32]]
+               precision    recall  f1-score   support
+
+    Connector       1.00      0.51      0.68        45
+      Costing       0.84      1.00      0.92        27
+Miscellaneous       1.00      0.94      0.97        35
+  Performance       0.60      1.00      0.75        25
+    SaaSInfra       0.91      0.97      0.94        33
+
+     accuracy                           0.85       165
+    macro avg       0.87      0.88      0.85       165
+ weighted avg       0.90      0.85      0.84       165
+
+0.8484848484848485
+[[39  0  0  6  0]
+ [ 0 27  0  0  0]
+ [ 0  0 35  0  0]
+ [ 1  0  0 24  0]
+ [ 0  0  0  0 33]]
+               precision    recall  f1-score   support
+
+    Connector       0.97      0.87      0.92        45
+      Costing       1.00      1.00      1.00        27
+Miscellaneous       1.00      1.00      1.00        35
+  Performance       0.80      0.96      0.87        25
+    SaaSInfra       1.00      1.00      1.00        33
+
+     accuracy                           0.96       165
+    macro avg       0.96      0.97      0.96       165
+ weighted avg       0.96      0.96      0.96       165
+
+0.9575757575757575
+C:\Users\jayaanan\Python37\lib\site-packages\sklearn\utils\deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+THE TOP 3 WORDS FOR TOPIC #0
+['performance', 'memory', 'vm']
+THE TOP 3 WORDS FOR TOPIC #1
+['network', 'kubernetes', 'hypervisor']
+THE TOP 3 WORDS FOR TOPIC #2
+['resource', 'alert', 'investigate']
+THE TOP 3 WORDS FOR TOPIC #3
+['service', 'connection', 'saas']
+THE TOP 3 WORDS FOR TOPIC #4
+['api', 'cloud', 'data']
+          category                                            message  LDA_Topic  LDA_Topic_label
+0        Connector   Alert: Connection lost to pod 'webserver-1' d...          3       connection
+1        Connector   Network connectivity issue detected in node '...          0           memory
+2        Connector   Cloud provider API service is unresponsive; u...          3       connection
+3        Connector   Connection timeout to external service 'api.e...          3       connection
+4        Connector   Network disruption detected: high packet loss...          4            cloud
+5        Connector   Connection error occurred while accessing clo...          4            cloud
+6        Connector   Lost connection to Kubernetes cluster: master...          0           memory
+7        Connector   Network instability observed: frequent fluctu...          2      performance
+8        Connector   Unable to connect to the internet from contai...          1  virtual_machine
+9        Connector   Connection failure detected: unable to establ...          3       connection
+10       Connector   Pod 'worker-5' unable to reach external servi...          3       connection
+11       Connector   Network congestion detected: increased latenc...          4            cloud
+12       Connector   Connection refused by the server: destination...          3       connection
+13       Connector   DNS resolution failure: unable to resolve hos...          3       connection
+14       Connector   Cloud provider API authentication failure; ch...          4            cloud
+15       Connector   Kubernetes cluster network partitioned: unabl...          1  virtual_machine
+16       Connector   Connection reset by peer: server terminated t...          3       connection
+17       Connector   Network packet loss detected on VLAN 'vlan10'...          2      performance
+18       Connector   Cloud resource 'instance-1' unavailable; chec...          2      performance
+19       Connector   Inconsistent network latency observed across ...          2      performance
+20       Connector   Connection terminated unexpectedly: TCP conne...          3       connection
+21       Connector   Kubernetes pod 'webserver-2' stuck in pending...          1  virtual_machine
+22       Connector   Network firewall blocking incoming connection...          3       connection
+23       Connector   Cloud provider authentication failure; verify...          4            cloud
+24       Connector   High network jitter detected: unstable latenc...          2      performance
+25       Connector   Connection rejected due to security policy on...          3       connection
+26       Connector   Kubernetes service 'frontend' unavailable; ta...          1  virtual_machine
+27       Connector   Network route misconfiguration: incorrect rou...          0           memory
+28       Connector   Connection dropped due to load balancer failu...          3       connection
+29       Connector   Cloud storage service 's3' inaccessible; chec...          4            cloud
+30       Connector   Network switch 'switch-1' experiencing high C...          4            cloud
+31       Connector   Alert: Device 'router-1' offline; network con...          3       connection
+32       Connector   Disk failure detected in cloud instance 'inst...          4            cloud
+33       Connector   Network interface 'eth1' in Kubernetes node '...          0           memory
+34       Connector   Connection failure: unable to establish VPN t...          3       connection
+35       Connector   CPU utilization spike detected in cloud serve...          4            cloud
+36       Connector   Network cable unplugged from device 'switch-2...          4            cloud
+37       Connector   Kubernetes node 'worker-4' experiencing high ...          0           memory
+38       Connector   Alert: Disk space utilization exceeded thresh...          4            cloud
+39       Connector   Network link 'eth2' in Kubernetes pod 'app-4'...          1  virtual_machine
+40       Connector   Connection refused: remote server 'db.example...          3       connection
+41       Connector   High network latency observed between datacen...          2      performance
+42       Connector   Cloud provider API rate limit exceeded; conne...          3       connection
+43       Connector   Kubernetes pod 'backend-3' not responding to ...          1  virtual_machine
+44       Connector   Network loop detected: packet storm causing b...          0           memory
+45       Connector   Connection attempt timed out: unable to estab...          3       connection
+46       Connector   Cloud storage 'bucket-2' quota reached; unabl...          4            cloud
+47       Connector   Network device 'firewall-1' crashed; no traff...          3       connection
+48       Connector   Kubernetes cluster certificate expired; API s...          3       connection
+49       Connector   Connection failed: SSL/TLS handshake error wh...          3       connection
+50       Connector   Network interface 'eth0' in Kubernetes node '...          4            cloud
+51       Connector   Cloud provider API timeout: unable to retriev...          4            cloud
+52       Connector   Connection failure: DNS resolution error for ...          3       connection
+53       Connector   Kubernetes pod 'app-5' stuck in terminating s...          2      performance
+54       Connector   Alert: Network congestion detected on switch ...          4            cloud
+55       Connector   Connection refused: destination server 'api.e...          3       connection
+56       Connector   Cloud provider authentication token expired; ...          2      performance
+57       Connector   Kubernetes cluster network partitioned: commu...          2      performance
+58       Connector   Connection reset by firewall 'fw-2': TCP conn...          3       connection
+59       Connector   Network packet loss observed on VPN tunnel 't...          3       connection
+60       Connector   Cloud resource 'database-1' experiencing high...          4            cloud
+61       Connector   Inconsistent network latency between cloud re...          2      performance
+62       Connector   Connection terminated by client: unexpected t...          3       connection
+63       Connector   Kubernetes pod 'webserver-3' unable to access...          1  virtual_machine
+64       Connector   Network firewall misconfiguration: incorrect ...          0           memory
+65       Connector   Cloud provider API service degradation: incre...          4            cloud
+66       Connector   Kubernetes service 'frontend' misconfigured; ...          1  virtual_machine
+67       Connector   Connection dropped: load balancer 'lb-2' reac...          3       connection
+68       Connector   Cloud storage service 'blob-1' unreachable; v...          0           memory
+69       Connector   Network switch 'switch-4' firmware upgrade in...          4            cloud
+70       Connector   Alert: Device 'router-2' experiencing high CP...          0           memory
+71       Connector   Disk failure in cloud instance 'instance-4'; ...          4            cloud
+72       Connector   Network interface 'eth1' in Kubernetes node '...          0           memory
+73       Connector   Connection failure: SSL certificate verificat...          3       connection
+74       Connector   High network latency observed between cloud r...          2      performance
+75       Connector   Cloud provider API request throttling: connec...          4            cloud
+76       Connector   Kubernetes pod 'backend-4' not responding to ...          1  virtual_machine
+77       Connector   Network loop detected: spanning tree converge...          0           memory
+78       Connector   Connection timeout: no response from remote s...          3       connection
+79       Connector   Cloud storage 's3' data corruption detected; ...          4            cloud
+80       Connector   Network device 'switch-5' experiencing freque...          4            cloud
+81       Connector   Kubernetes node 'worker-3' memory leak detect...          0           memory
+82       Connector   Alert: Disk space utilization critical in clo...          4            cloud
+83       Connector   Network link 'eth2' in Kubernetes pod 'app-6'...          1  virtual_machine
+84       Connector   Connection refused: database server 'db.examp...          3       connection
+85       Connector   High network latency observed within datacent...          2      performance
+86       Connector   Cloud provider API access denied: unauthorize...          4            cloud
+87       Connector   Kubernetes pod 'frontend-5' repeatedly crashi...          1  virtual_machine
+88       Connector   Network interface 'eth3' in Kubernetes node '...          0           memory
+89       Connector   Connection failed: VPN tunnel 'tunnel-2' nego...          3       connection
+90       Connector   Cloud instance 'vm-4' CPU overutilization; pe...          4            cloud
+91       Connector   Network cable unplugged from device 'switch-6...          4            cloud
+92       Connector   Kubernetes pod 'app-7' unable to access share...          3       connection
+93       Connector   Connection dropped: load balancer 'lb-3' unab...          3       connection
+94       Connector   Cloud storage 'bucket-3' permission denied; u...          4            cloud
+95       Connector   Network switch 'switch-7' firmware update fai...          1  virtual_machine
+96       Connector   Alert: Device 'firewall-3' in bypass mode; no...          3       connection
+97       Connector   Disk failure in Kubernetes persistent volume ...          4            cloud
+98       Connector   Network interface 'eth4' in cloud instance 'v...          4            cloud
+99       Connector   Connection failure: SSL certificate expired f...          3       connection
+100    Performance   Alert: High CPU utilization detected in Kuber...          0           memory
+101    Performance   Network latency spike observed between nodes ...          4            cloud
+102    Performance   Virtual machine 'vm-1' experiencing memory co...          4            cloud
+103    Performance   Hypervisor 'hypervisor-1' CPU saturation dete...          4            cloud
+104    Performance   Cloud provider API response time exceeding th...          4            cloud
+105    Performance   Kubernetes pod 'webserver-1' response time de...          1  virtual_machine
+106    Performance   Network bandwidth saturation observed on inte...          4            cloud
+107    Performance   VM 'vm-2' disk I/O latency exceeding normal t...          4            cloud
+108    Performance   Hypervisor 'hypervisor-2' experiencing high m...          0           memory
+109    Performance   Cloud storage 'bucket-1' read/write latency i...          4            cloud
+110    Performance   Alert: CPU contention detected in Kubernetes ...          0           memory
+111    Performance   Network congestion observed on subnet 'subnet...          0           memory
+112    Performance   VM 'vm-3' network throughput degradation; pot...          4            cloud
+113    Performance   Hypervisor 'hypervisor-3' storage latency spi...          4            cloud
+114    Performance   Cloud provider API rate limiting; increased r...          4            cloud
+115    Performance   Kubernetes pod 'app-2' response time exceedin...          4            cloud
+116    Performance   Network packet loss observed between cloud re...          2      performance
+117    Performance   VM 'vm-4' experiencing high CPU steal time; p...          4            cloud
+118    Performance   Hypervisor 'hypervisor-4' network connectivit...          4            cloud
+119    Performance   Cloud provider API service degradation; incre...          4            cloud
+120    Performance   Alert: Memory ballooning observed in Kubernet...          0           memory
+121    Performance   Network bandwidth limitation on interface 'et...          1  virtual_machine
+122    Performance   VM 'vm-5' disk space utilization nearing capa...          4            cloud
+123    Performance   Hypervisor 'hypervisor-5' CPU overcommitment;...          4            cloud
+124    Performance   Cloud storage 'bucket-2' experiencing slow re...          4            cloud
+125    Performance   Kubernetes pod 'webserver-2' excessive memory...          0           memory
+126    Performance   Network routing misconfiguration detected; su...          0           memory
+127    Performance   VM 'vm-6' network adapter driver issue; inter...          4            cloud
+128    Performance   Hypervisor 'hypervisor-6' storage connectivit...          4            cloud
+129    Performance   Cloud provider API request queuing; increased...          4            cloud
+130    Performance   Alert: CPU throttling in Kubernetes pod 'app-...          0           memory
+131    Performance   Network QoS misconfiguration; improper bandwi...          2      performance
+132    Performance   VM 'vm-7' experiencing disk I/O contention; i...          4            cloud
+133    Performance   Hypervisor 'hypervisor-7' network adapter fai...          4            cloud
+134    Performance   Cloud storage 'bucket-3' high object retrieva...          4            cloud
+135    Performance   Kubernetes pod 'backend-1' excessive network ...          1  virtual_machine
+136    Performance   Network switch 'switch-1' buffer overflow; in...          4            cloud
+137    Performance   VM 'vm-8' memory ballooning; increased swappi...          4            cloud
+138    Performance   Hypervisor 'hypervisor-8' storage network con...          4            cloud
+139    Performance   Cloud provider API service unavailability; de...          4            cloud
+140    Performance   Alert: CPU spikes in Kubernetes node 'worker-...          0           memory
+141    Performance   Network bandwidth limitation on VLAN 'vlan1';...          1  virtual_machine
+142    Performance   VM 'vm-9' experiencing high disk latency; pot...          4            cloud
+143    Performance   Hypervisor 'hypervisor-9' CPU thermal throttl...          0           memory
+144    Performance   Cloud storage 'bucket-4' slow data replicatio...          4            cloud
+145    Performance   Kubernetes pod 'app-4' high network jitter; p...          2      performance
+146    Performance   Network switch 'switch-2' interface errors; p...          4            cloud
+147    Performance   VM 'vm-10' disk I/O saturation; increased lat...          4            cloud
+148    Performance   Hypervisor 'hypervisor-10' network port flapp...          4            cloud
+149    Performance   Cloud provider API response time degradation;...          4            cloud
+150    Performance   Alert: Memory pressure detected in Kubernetes...          0           memory
+151    Performance   Network congestion observed on VLAN 'vlan2'; ...          1  virtual_machine
+152    Performance   VM 'vm-11' CPU utilization exceeding threshol...          4            cloud
+153    Performance   Hypervisor 'hypervisor-11' storage latency de...          4            cloud
+154    Performance   Cloud provider API rate limiting; increased r...          4            cloud
+155    Performance   Kubernetes pod 'webserver-3' response time de...          1  virtual_machine
+156    Performance   Network packet loss observed between cloud re...          2      performance
+157    Performance   VM 'vm-12' experiencing high CPU steal time; ...          4            cloud
+158    Performance   Hypervisor 'hypervisor-12' network connectivi...          4            cloud
+159    Performance   Cloud provider API service degradation; incre...          4            cloud
+160    Performance   Alert: Memory ballooning observed in Kubernet...          0           memory
+161    Performance   Network bandwidth limitation on interface 'et...          1  virtual_machine
+162    Performance   VM 'vm-13' disk space utilization nearing cap...          4            cloud
+163    Performance   Hypervisor 'hypervisor-13' CPU overcommitment...          4            cloud
+164    Performance   Cloud storage 'bucket-5' experiencing slow re...          4            cloud
+165    Performance   Kubernetes pod 'app-6' excessive memory usage...          0           memory
+166    Performance   Network routing misconfiguration detected; su...          0           memory
+167    Performance   VM 'vm-14' network adapter driver issue; inte...          4            cloud
+168    Performance   Hypervisor 'hypervisor-14' storage connectivi...          4            cloud
+169    Performance   Cloud provider API request queuing; increased...          4            cloud
+170    Performance   Alert: CPU throttling in Kubernetes pod 'app-...          0           memory
+171    Performance   Network QoS misconfiguration; improper bandwi...          2      performance
+172    Performance   VM 'vm-15' experiencing disk I/O contention; ...          4            cloud
+173    Performance   Hypervisor 'hypervisor-15' network adapter fa...          4            cloud
+174    Performance   Cloud storage 'bucket-6' high object retrieva...          4            cloud
+175    Performance   Kubernetes pod 'backend-2' excessive network ...          1  virtual_machine
+176    Performance   Network switch 'switch-3' buffer overflow; in...          4            cloud
+177    Performance   VM 'vm-16' memory ballooning; increased swapp...          4            cloud
+178    Performance   Hypervisor 'hypervisor-16' storage network co...          4            cloud
+179    Performance   Cloud provider API service unavailability; de...          4            cloud
+180    Performance   Alert: CPU spikes in Kubernetes node 'worker-...          0           memory
+181    Performance   Network bandwidth limitation on VLAN 'vlan3';...          1  virtual_machine
+182    Performance   VM 'vm-17' experiencing high disk latency; po...          4            cloud
+183    Performance   Hypervisor 'hypervisor-17' CPU thermal thrott...          0           memory
+184    Performance   Cloud storage 'bucket-7' slow data replicatio...          4            cloud
+185    Performance   Kubernetes pod 'app-8' high network jitter; p...          2      performance
+186    Performance   Network switch 'switch-4' interface errors; p...          4            cloud
+187    Performance   VM 'vm-18' disk I/O saturation; increased lat...          4            cloud
+188    Performance   Hypervisor 'hypervisor-18' network port flapp...          4            cloud
+189    Performance   Cloud provider API response time degradation;...          4            cloud
+190    Performance   Alert: Memory pressure detected in Kubernetes...          0           memory
+191    Performance   Network congestion observed on VLAN 'vlan4'; ...          1  virtual_machine
+192    Performance   VM 'vm-19' CPU utilization exceeding threshol...          4            cloud
+193    Performance   Hypervisor 'hypervisor-19' storage latency de...          4            cloud
+194    Performance   Cloud provider API rate limiting; increased r...          4            cloud
+195    Performance   Kubernetes pod 'webserver-4' response time de...          1  virtual_machine
+196    Performance   Network packet loss observed between cloud re...          2      performance
+197    Performance   VM 'vm-20' experiencing high CPU steal time; ...          4            cloud
+198    Performance   Hypervisor 'hypervisor-20' network connectivi...          4            cloud
+199    Performance   Cloud provider API service degradation; incre...          4            cloud
+200        Costing   Alert: High monthly cost detected in cloud ac...          0           memory
+201        Costing   Kubernetes cluster cost exceeding expected th...          1  virtual_machine
+202        Costing   Network bandwidth utilization exceeding alloc...          4            cloud
+203        Costing   Virtual machine 'vm-1' running on idle state;...          1  virtual_machine
+204        Costing   Hypervisor 'hypervisor-1' resource waste dete...          1  virtual_machine
+205        Costing   Cloud provider API usage cost surpassing allo...          4            cloud
+206        Costing   Kubernetes pod 'app-1' consuming excessive re...          1  virtual_machine
+207        Costing   Network egress charges exceeding anticipated ...          4            cloud
+208        Costing   VM 'vm-2' underutilized; consider resizing or...          1  virtual_machine
+209        Costing   Hypervisor 'hypervisor-2' idle VMs consuming ...          1  virtual_machine
+210        Costing   Cloud storage 'bucket-1' storage costs exceed...          4            cloud
+211        Costing   Alert: Unexpected spike in cloud resource cos...          2      performance
+212        Costing   Kubernetes cluster idle nodes incurring unnec...          1  virtual_machine
+213        Costing   Network transfer costs higher than projected;...          4            cloud
+214        Costing   VM 'vm-3' running on expensive instance type;...          4            cloud
+215        Costing   Hypervisor 'hypervisor-3' VMs with unused sna...          1  virtual_machine
+216        Costing   Cloud provider API requests exceeding budgete...          4            cloud
+217        Costing   Kubernetes pod 'app-2' over-provisioned with ...          1  virtual_machine
+218        Costing   Network egress charges increasing rapidly; in...          4            cloud
+219        Costing   VM 'vm-4' unused for an extended period; cons...          4            cloud
+220        Costing   Hypervisor 'hypervisor-4' inefficient power m...          0           memory
+221        Costing   Cloud storage 'bucket-2' data redundancy cost...          4            cloud
+222        Costing   Alert: Unallocated cloud resources incurring ...          2      performance
+223        Costing   Kubernetes cluster scaling inefficiencies; op...          1  virtual_machine
+224        Costing   Network transfer costs higher during peak hou...          4            cloud
+225        Costing   VM 'vm-5' with suboptimal cost-to-performance...          0           memory
+226        Costing   Hypervisor 'hypervisor-5' VMs with unoptimize...          1  virtual_machine
+227        Costing   Cloud provider API pricing model change; revi...          0           memory
+228        Costing   Kubernetes pod 'app-3' with unnecessary exter...          0           memory
+229        Costing   Network egress charges increasing due to unau...          4            cloud
+230        Costing   Alert: Unexpected increase in cloud storage c...          4            cloud
+231        Costing   Kubernetes cluster with underutilized nodes i...          1  virtual_machine
+232        Costing   Network transfer costs impacted by inefficien...          4            cloud
+233        Costing   VM 'vm-6' with suboptimal storage configurati...          0           memory
+234        Costing   Hypervisor 'hypervisor-6' VMs with excessive ...          1  virtual_machine
+235        Costing   Cloud provider API usage spikes leading to co...          4            cloud
+236        Costing   Kubernetes pod 'app-4' with unnecessary resou...          2      performance
+237        Costing   Network egress charges exceeding budget due t...          4            cloud
+238        Costing   VM 'vm-7' with suboptimal network bandwidth a...          0           memory
+239        Costing   Hypervisor 'hypervisor-7' VMs with unoptimize...          1  virtual_machine
+240        Costing   Alert: Unexpected increase in cloud compute c...          2      performance
+241        Costing   Kubernetes cluster with unnecessary resource ...          1  virtual_machine
+242        Costing   Network transfer costs impacted by inefficien...          4            cloud
+243        Costing   VM 'vm-8' with suboptimal power management se...          0           memory
+244        Costing   Hypervisor 'hypervisor-8' VMs with unoptimize...          1  virtual_machine
+245        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud
+246        Costing   Kubernetes pod 'app-5' with excessive externa...          0           memory
+247        Costing   Network egress charges exceeding budget due t...          4            cloud
+248        Costing   VM 'vm-9' with suboptimal backup retention po...          1  virtual_machine
+249        Costing   Hypervisor 'hypervisor-9' VMs with unoptimize...          1  virtual_machine
+250        Costing   Alert: Unexpected increase in cloud service c...          2      performance
+251        Costing   Kubernetes cluster with idle pods incurring u...          1  virtual_machine
+252        Costing   Network transfer costs exceeding budget due t...          4            cloud
+253        Costing   VM 'vm-10' with suboptimal memory configurati...          0           memory
+254        Costing   Hypervisor 'hypervisor-10' VMs with unoptimiz...          1  virtual_machine
+255        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud
+256        Costing   Kubernetes pod 'app-6' with unnecessary datab...          0           memory
+257        Costing   Network egress charges increasing due to unau...          4            cloud
+258        Costing   VM 'vm-11' with suboptimal CPU utilization; a...          0           memory
+259        Costing   Hypervisor 'hypervisor-11' VMs with unoptimiz...          1  virtual_machine
+260        Costing   Cloud storage 'bucket-3' data retrieval costs...          4            cloud
+261        Costing   Alert: Unallocated cloud resources incurring ...          2      performance
+262        Costing   Kubernetes cluster scaling inefficiencies; op...          1  virtual_machine
+263        Costing   Network transfer costs impacted by inefficien...          4            cloud
+264        Costing   VM 'vm-12' with suboptimal disk storage confi...          0           memory
+265        Costing   Hypervisor 'hypervisor-12' VMs with excessive...          1  virtual_machine
+266        Costing   Cloud provider API pricing model change; revi...          0           memory
+267        Costing   Kubernetes pod 'app-7' with unnecessary exter...          0           memory
+268        Costing   Network egress charges increasing due to inef...          1  virtual_machine
+269        Costing   VM 'vm-13' with suboptimal storage utilizatio...          0           memory
+270        Costing   Hypervisor 'hypervisor-13' VMs with unoptimiz...          0           memory
+271        Costing   Cloud provider API usage spikes leading to co...          4            cloud
+272        Costing   Kubernetes pod 'app-8' with excessive resourc...          2      performance
+273        Costing   Network egress charges impacted by inefficien...          4            cloud
+274        Costing   VM 'vm-14' with suboptimal network bandwidth ...          0           memory
+275        Costing   Hypervisor 'hypervisor-14' VMs with unoptimiz...          1  virtual_machine
+276        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud
+277        Costing   Kubernetes pod 'app-9' with unnecessary resou...          2      performance
+278        Costing   Network egress charges exceeding budget due t...          4            cloud
+279        Costing   VM 'vm-15' with suboptimal power management s...          0           memory
+280        Costing   Hypervisor 'hypervisor-15' VMs with unoptimiz...          1  virtual_machine
+281        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud
+282        Costing   Kubernetes pod 'app-10' with excessive extern...          0           memory
+283        Costing   Network egress charges exceeding budget due t...          4            cloud
+284        Costing   VM 'vm-16' with suboptimal backup retention p...          1  virtual_machine
+285        Costing   Hypervisor 'hypervisor-16' VMs with unoptimiz...          1  virtual_machine
+286        Costing   Cloud provider API usage exceeding allocated ...          4            cloud
+287        Costing   Kubernetes pod 'app-11' with unnecessary reso...          1  virtual_machine
+288        Costing   Network egress charges increasing due to inef...          1  virtual_machine
+289        Costing   VM 'vm-17' with suboptimal network security c...          0           memory
+290        Costing   Hypervisor 'hypervisor-17' VMs with unoptimiz...          1  virtual_machine
+291        Costing   Cloud storage 'bucket-4' data transfer costs ...          4            cloud
+292        Costing   Alert: Unexpected increase in cloud compute c...          2      performance
+293        Costing   Kubernetes cluster with underutilized nodes i...          1  virtual_machine
+294        Costing   Network transfer costs impacted by inefficien...          4            cloud
+295        Costing   VM 'vm-18' with suboptimal storage performanc...          0           memory
+296        Costing   Hypervisor 'hypervisor-18' VMs with unoptimiz...          1  virtual_machine
+297        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud
+298        Costing   Kubernetes pod 'app-12' with excessive databa...          0           memory
+299        Costing   Network egress charges increasing due to unau...          4            cloud
+300      SaaSInfra   Alert: High latency detected in SaaS applicat...          2      performance
+301      SaaSInfra   Database connectivity issue in SaaS platform;...          3       connection
+302      SaaSInfra   Performance degradation in SaaS service 'Serv...          3       connection
+303      SaaSInfra   Alert: Increased error rates in SaaS API resp...          3       connection
+304      SaaSInfra   Storage capacity nearing threshold in SaaS in...          4            cloud
+305      SaaSInfra   SaaS platform experiencing high CPU utilizati...          0           memory
+306      SaaSInfra   Network connectivity issue impacting SaaS ser...          3       connection
+307      SaaSInfra   Alert: Unexpected downtime in SaaS applicatio...          2      performance
+308      SaaSInfra   Resource contention observed in SaaS infrastr...          2      performance
+309      SaaSInfra   Data synchronization issue between SaaS insta...          2      performance
+310      SaaSInfra   Alert: High memory consumption in SaaS platfo...          0           memory
+311      SaaSInfra   Database query performance degradation in Saa...          4            cloud
+312      SaaSInfra   Network firewall misconfiguration in SaaS inf...          3       connection
+313      SaaSInfra   Alert: Increased response time in SaaS servic...          3       connection
+314      SaaSInfra   Disk I/O latency issue in SaaS platform; opti...          3       connection
+315      SaaSInfra   Alert: Unusual network traffic pattern detect...          3       connection
+316      SaaSInfra   Data replication failure in SaaS environment;...          2      performance
+317      SaaSInfra   Alert: SaaS application 'App-4' unresponsive;...          3       connection
+318      SaaSInfra   Load balancer misconfiguration in SaaS infras...          3       connection
+319      SaaSInfra   Alert: Database server crash in SaaS platform...          2      performance
+320      SaaSInfra   SaaS service 'Service-3' experiencing frequen...          0           memory
+321      SaaSInfra   Alert: Infrastructure scaling failure in SaaS...          3       connection
+322      SaaSInfra   DNS resolution problem impacting SaaS applica...          3       connection
+323      SaaSInfra   Alert: Service request queue build-up in SaaS...          0           memory
+324      SaaSInfra   Certificate expiration issue in SaaS infrastr...          3       connection
+325      SaaSInfra   Alert: Authentication service outage in SaaS ...          2      performance
+326      SaaSInfra   Database backup failure in SaaS platform; inv...          0           memory
+327      SaaSInfra   Alert: Unexpected data loss in SaaS applicati...          2      performance
+328      SaaSInfra   Inadequate logging and monitoring in SaaS inf...          3       connection
+329      SaaSInfra   Alert: Increased CPU contention in SaaS servi...          0           memory
+330      SaaSInfra   Network load balancer failure impacting SaaS ...          3       connection
+331      SaaSInfra   Alert: Configuration inconsistency detected i...          3       connection
+332      SaaSInfra   Disk space exhaustion in SaaS platform; optim...          3       connection
+333      SaaSInfra   Alert: Unstable network connectivity in SaaS ...          2      performance
+334      SaaSInfra   Database replication lag in SaaS application ...          3       connection
+335      SaaSInfra   Alert: Infrastructure component failure in Sa...          3       connection
+336      SaaSInfra   Inefficient caching mechanism in SaaS infrast...          3       connection
+337      SaaSInfra   Alert: Increased database response time in Sa...          3       connection
+338      SaaSInfra   Resource exhaustion observed in SaaS environm...          3       connection
+339      SaaSInfra   Alert: API rate limiting issue in SaaS platfo...          3       connection
+340      SaaSInfra   Inconsistent data synchronization across SaaS...          2      performance
+341      SaaSInfra   Alert: Unresponsive third-party integration i...          2      performance
+342      SaaSInfra   Inadequate disaster recovery mechanisms in Sa...          0           memory
+343      SaaSInfra   Alert: Service degradation in SaaS applicatio...          3       connection
+344      SaaSInfra   Database deadlock issue impacting SaaS platfo...          2      performance
+345      SaaSInfra   Alert: Infrastructure deployment failure in S...          2      performance
+346      SaaSInfra   Inefficient query execution plan in SaaS data...          4            cloud
+347      SaaSInfra   Alert: Increased memory leaks in SaaS service...          0           memory
+348      SaaSInfra   Network congestion issue impacting SaaS appli...          1  virtual_machine
+349      SaaSInfra   Alert: Inconsistent service availability in S...          3       connection
+350      SaaSInfra   Alert: Increased API response errors in SaaS ...          2      performance
+351      SaaSInfra   Inadequate service monitoring in SaaS infrast...          3       connection
+352      SaaSInfra   Alert: High CPU usage in SaaS application 'Ap...          0           memory
+353      SaaSInfra   Network misconfiguration impacting SaaS servi...          0           memory
+354      SaaSInfra   Alert: Database performance degradation in Sa...          3       connection
+355      SaaSInfra   Inefficient data indexing in SaaS application...          4            cloud
+356      SaaSInfra   Alert: Unusual traffic pattern detected in Sa...          3       connection
+357      SaaSInfra   Insufficient redundancy in SaaS infrastructur...          3       connection
+358      SaaSInfra   Alert: Service request backlog building up in...          0           memory
+359      SaaSInfra   Inadequate disaster recovery testing in SaaS ...          0           memory
+360      SaaSInfra   Alert: Unauthorized access attempt detected i...          3       connection
+361      SaaSInfra   Insufficient caching mechanisms in SaaS platf...          3       connection
+362      SaaSInfra   Alert: Database connection pool exhaustion in...          3       connection
+363      SaaSInfra   Inconsistent data replication across SaaS ins...          2      performance
+364      SaaSInfra   Alert: Infrastructure resource contention in ...          2      performance
+365      SaaSInfra   Inadequate error handling in SaaS application...          3       connection
+366      SaaSInfra   Alert: Increased database query execution tim...          4            cloud
+367      SaaSInfra   Insufficient backup and restore procedures in...          2      performance
+368      SaaSInfra   Alert: Service interruption in SaaS applicati...          3       connection
+369      SaaSInfra   Inefficient data storage utilization in SaaS ...          0           memory
+370      SaaSInfra   Alert: Unresponsive third-party service integ...          2      performance
+371      SaaSInfra   Inadequate logging and auditing in SaaS infra...          3       connection
+372      SaaSInfra   Alert: Infrastructure scaling issues in SaaS ...          3       connection
+373      SaaSInfra   Inefficient data migration processes in SaaS ...          2      performance
+374      SaaSInfra   Alert: Increased response time in SaaS servic...          3       connection
+375      SaaSInfra   Insufficient data encryption mechanisms in Sa...          3       connection
+376      SaaSInfra   Alert: Configuration drift detected in SaaS e...          2      performance
+377      SaaSInfra   Inadequate user access controls in SaaS appli...          3       connection
+378      SaaSInfra   Alert: Infrastructure component failure in Sa...          3       connection
+379      SaaSInfra   Inefficient resource allocation in SaaS envir...          2      performance
+380      SaaSInfra   Alert: Database deadlock detected in SaaS app...          2      performance
+381      SaaSInfra   Inadequate load testing in SaaS infrastructur...          3       connection
+382      SaaSInfra   Alert: Increased memory utilization in SaaS s...          0           memory
+383      SaaSInfra   Inconsistent service availability across SaaS...          3       connection
+384      SaaSInfra   Alert: Infrastructure deployment errors in Sa...          2      performance
+385      SaaSInfra   Inadequate data backup frequency in SaaS plat...          0           memory
+386      SaaSInfra   Alert: Inefficient API usage in SaaS applicat...          4            cloud
+387      SaaSInfra   Network latency issue impacting SaaS service ...          3       connection
+388      SaaSInfra   Alert: Unstable database connection in SaaS e...          3       connection
+389      SaaSInfra   Inadequate system health monitoring in SaaS i...          1  virtual_machine
+390      SaaSInfra   Alert: Increased disk I/O latency in SaaS pla...          3       connection
+391      SaaSInfra   Inefficient data caching strategies in SaaS a...          3       connection
+392      SaaSInfra   Alert: Network congestion observed in SaaS en...          2      performance
+393      SaaSInfra   Inadequate disaster recovery documentation in...          3       connection
+394      SaaSInfra   Alert: Service request processing delays in S...          3       connection
+395      SaaSInfra   Inconsistent data validation in SaaS applicat...          4            cloud
+396      SaaSInfra   Alert: Increased CPU contention in SaaS envir...          0           memory
+397      SaaSInfra   Insufficient database connection pooling in S...          3       connection
+398      SaaSInfra   Alert: Unusual system resource consumption in...          2      performance
+399      SaaSInfra   Inadequate service level agreement (SLA) moni...          3       connection
+400  Miscellaneous   Alert: Unrecognized system error code encount...          2      performance
+401  Miscellaneous   Unexpected application behavior reported; inv...          2      performance
+402  Miscellaneous   Alert: File corruption detected in critical s...          3       connection
+403  Miscellaneous   Unresponsive system monitoring tool identifie...          2      performance
+404  Miscellaneous   Alert: Inconsistent data replication in distr...          2      performance
+405  Miscellaneous   Unstable system behavior observed during sche...          2      performance
+406  Miscellaneous   Alert: Insufficient disk space for log files;...          3       connection
+407  Miscellaneous   Unpredictable system response time reported b...          3       connection
+408  Miscellaneous   Alert: Incompatible software library version ...          3       connection
+409  Miscellaneous   Unexpected data loss reported; investigate an...          2      performance
+410  Miscellaneous   Alert: Unresponsive system backup process; in...          0           memory
+411  Miscellaneous   Unscheduled system restart detected; investig...          2      performance
+412  Miscellaneous   Alert: High memory consumption in system comp...          0           memory
+413  Miscellaneous   Unstable system behavior observed after recen...          2      performance
+414  Miscellaneous   Alert: Inconsistent data integrity checks acr...          4            cloud
+415  Miscellaneous   Unrecognized system resource utilization patt...          2      performance
+416  Miscellaneous   Alert: Unresponsive system task scheduler; in...          2      performance
+417  Miscellaneous   Unexpected system file permission changes rep...          2      performance
+418  Miscellaneous   Alert: Unstable communication between system ...          2      performance
+419  Miscellaneous   Unpredictable system behavior reported on spe...          2      performance
+420  Miscellaneous   Alert: Increased response time in data retrie...          4            cloud
+421  Miscellaneous   Unrecognized system log entries reported; inv...          2      performance
+422  Miscellaneous   Alert: Unresponsive system service discovery ...          2      performance
+423  Miscellaneous   Unexpected system crashes reported during spe...          2      performance
+424  Miscellaneous   Alert: High CPU utilization in non-critical s...          0           memory
+425  Miscellaneous   Unstable system behavior observed during heav...          2      performance
+426  Miscellaneous   Alert: Inconsistent data synchronization betw...          2      performance
+427  Miscellaneous   Unrecognized system software conflict detecte...          2      performance
+428  Miscellaneous   Alert: Unresponsive system resource monitorin...          2      performance
+429  Miscellaneous   Unexpected system behavior reported during sp...          2      performance
+430  Miscellaneous   Alert: Inconsistent data encryption across sy...          4            cloud
+431  Miscellaneous   Unrecognized system performance bottleneck id...          2      performance
+432  Miscellaneous   Alert: Unresponsive system notification mecha...          2      performance
+433  Miscellaneous   Unexpected data inconsistency reported; inves...          2      performance
+434  Miscellaneous   Alert: Insufficient system error handling; im...          3       connection
+435  Miscellaneous   Unrecognized system process contention observ...          2      performance
+436  Miscellaneous   Alert: Unresponsive system task execution; in...          2      performance
+437  Miscellaneous   Unexpected system behavior reported by specif...          2      performance
+438  Miscellaneous   Alert: Unrecognized system vulnerability dete...          0           memory
+439  Miscellaneous   Unstable system behavior observed during spec...          2      performance
+440  Miscellaneous   Alert: Inconsistent data formatting across sy...          4            cloud
+441  Miscellaneous   Unrecognized system dependency conflict ident...          2      performance
+442  Miscellaneous   Alert: Unresponsive system email notification...          2      performance
+443  Miscellaneous   Unexpected system memory leaks reported; inve...          0           memory
+444  Miscellaneous   Alert: Inconsistent system clock synchronizat...          2      performance
+445  Miscellaneous   Unrecognized system resource contention obser...          2      performance
+446  Miscellaneous   Alert: Unresponsive system job scheduler; inv...          2      performance
+447  Miscellaneous   Unexpected system behavior reported during sp...          2      performance
+448  Miscellaneous   Alert: Inconsistent data indexing across syst...          2      performance
+449  Miscellaneous   Unrecognized system software instability repo...          2      performance
+450  Miscellaneous   Alert: Unrecognized system log files generate...          2      performance
+451  Miscellaneous   Unexpected system behavior reported after rec...          2      performance
+452  Miscellaneous   Alert: Inconsistent data validation rules acr...          4            cloud
+453  Miscellaneous   Unresponsive system resource allocation mecha...          2      performance
+454  Miscellaneous   Alert: High disk fragmentation affecting file...          4            cloud
+455  Miscellaneous   Unrecognized system process deadlock detected...          2      performance
+456  Miscellaneous   Alert: Unresponsive system service registry; ...          2      performance
+457  Miscellaneous   Unexpected system response time variations re...          2      performance
+458  Miscellaneous   Alert: Inconsistent data encoding across syst...          4            cloud
+459  Miscellaneous   Unrecognized system file corruption detected;...          4            cloud
+460  Miscellaneous   Alert: Unresponsive system job queue; investi...          2      performance
+461  Miscellaneous   Unexpected system behavior reported during sp...          2      performance
+462  Miscellaneous   Alert: Inconsistent data partitioning across ...          2      performance
+463  Miscellaneous   Unrecognized system resource contention obser...          2      performance
+464  Miscellaneous   Alert: Unresponsive system deployment automat...          2      performance
+465  Miscellaneous   Unexpected system crashes reported during spe...          2      performance
+466  Miscellaneous   Alert: Inconsistent data serialization across...          4            cloud
+467  Miscellaneous   Unrecognized system software misconfiguration...          2      performance
+468  Miscellaneous   Alert: Unresponsive system event logging; inv...          2      performance
+469  Miscellaneous   Unexpected data duplication reported in speci...          2      performance
+470  Miscellaneous   Alert: Inconsistent system messaging formats;...          2      performance
+471  Miscellaneous   Unrecognized system performance degradation r...          2      performance
+472  Miscellaneous   Alert: Unresponsive system monitoring dashboa...          2      performance
+473  Miscellaneous   Unexpected system behavior observed during sp...          2      performance
+474  Miscellaneous   Alert: Inconsistent data deduplication across...          4            cloud
+475  Miscellaneous   Unrecognized system memory fragmentation dete...          0           memory
+476  Miscellaneous   Alert: Unresponsive system workflow scheduler...          2      performance
+477  Miscellaneous   Unexpected system file system errors reported...          2      performance
+478  Miscellaneous   Alert: Inconsistent system logging timestamps...          3       connection
+479  Miscellaneous   Unrecognized system software compatibility is...          2      performance
+480  Miscellaneous   Alert: Unresponsive system health monitoring;...          2      performance
+481  Miscellaneous   Unexpected system behavior reported during sp...          2      performance
+482  Miscellaneous   Alert: Inconsistent data migration across sys...          2      performance
+483  Miscellaneous   Unrecognized system process inefficiency dete...          0           memory
+484  Miscellaneous   Alert: Unresponsive system configuration mana...          3       connection
+485  Miscellaneous   Unexpected data corruption reported in specif...          2      performance
+486  Miscellaneous   Alert: Inconsistent system error reporting; e...          3       connection
+487  Miscellaneous   Unrecognized system service bottleneck identi...          2      performance
+488  Miscellaneous   Alert: Unresponsive system database connectio...          3       connection
+489  Miscellaneous   Unexpected system behavior observed during sp...          2      performance
+490  Miscellaneous   Alert: Inconsistent data backup verification;...          0           memory
+491  Miscellaneous   Unrecognized system software vulnerability di...          0           memory
+492  Miscellaneous   Alert: Unresponsive system notification syste...          2      performance
+493  Miscellaneous   Unexpected system file system corruption repo...          2      performance
+494  Miscellaneous   Alert: Inconsistent data reconciliation acros...          4            cloud
+495  Miscellaneous   Unrecognized system resource overutilization ...          2      performance
+496  Miscellaneous   Alert: Unresponsive system log rotation; inve...          2      performance
+497  Miscellaneous   Unexpected system behavior reported during sp...          2      performance
+498  Miscellaneous   Alert: Inconsistent data caching across syste...          3       connection
+499  Miscellaneous   Unrecognized system software license violatio...          2      performance
+C:\Users\jayaanan\Python37\lib\site-packages\sklearn\decomposition\_nmf.py:294: FutureWarning: The 'init' value, when 'init=None' and n_components is less than n_samples and n_features, will be changed from 'nndsvd' to 'nndsvda' in 1.1 (renaming of 0.26).
+  FutureWarning,
+C:\Users\jayaanan\Python37\lib\site-packages\sklearn\utils\deprecation.py:87: FutureWarning: Function get_feature_names is deprecated; get_feature_names is deprecated in 1.0 and will be removed in 1.2. Please use get_feature_names_out instead.
+  warnings.warn(msg, category=FutureWarning)
+THE TOP 3 WORDS FOR TOPIC #0
+['alert', 'investigate', 'service']
+THE TOP 3 WORDS FOR TOPIC #1
+['storage', 'vm', 'hypervisor']
+THE TOP 3 WORDS FOR TOPIC #2
+['cloud', 'provider', 'api']
+THE TOP 3 WORDS FOR TOPIC #3
+['transfer', 'inconsistent', 'data']
+THE TOP 3 WORDS FOR TOPIC #4
+['potential', 'kubernetes', 'network']
+          category                                            message  LDA_Topic  LDA_Topic_label  NMF_Topic    NMF_Topic_label
+0        Connector   Alert: Connection lost to pod 'webserver-1' d...          3       connection          3  data_inconsistent
+1        Connector   Network connectivity issue detected in node '...          0           memory          0      service_alert
+2        Connector   Cloud provider API service is unresponsive; u...          3       connection          3  data_inconsistent
+3        Connector   Connection timeout to external service 'api.e...          3       connection          3  data_inconsistent
+4        Connector   Network disruption detected: high packet loss...          4            cloud          4         kubernetes
+5        Connector   Connection error occurred while accessing clo...          4            cloud          4         kubernetes
+6        Connector   Lost connection to Kubernetes cluster: master...          0           memory          0      service_alert
+7        Connector   Network instability observed: frequent fluctu...          2      performance          2              cloud
+8        Connector   Unable to connect to the internet from contai...          1  virtual_machine          1         hypervisor
+9        Connector   Connection failure detected: unable to establ...          3       connection          3  data_inconsistent
+10       Connector   Pod 'worker-5' unable to reach external servi...          3       connection          3  data_inconsistent
+11       Connector   Network congestion detected: increased latenc...          4            cloud          1         hypervisor
+12       Connector   Connection refused by the server: destination...          3       connection          3  data_inconsistent
+13       Connector   DNS resolution failure: unable to resolve hos...          3       connection          3  data_inconsistent
+14       Connector   Cloud provider API authentication failure; ch...          4            cloud          4         kubernetes
+15       Connector   Kubernetes cluster network partitioned: unabl...          1  virtual_machine          1         hypervisor
+16       Connector   Connection reset by peer: server terminated t...          3       connection          3  data_inconsistent
+17       Connector   Network packet loss detected on VLAN 'vlan10'...          2      performance          2              cloud
+18       Connector   Cloud resource 'instance-1' unavailable; chec...          2      performance          4         kubernetes
+19       Connector   Inconsistent network latency observed across ...          2      performance          2              cloud
+20       Connector   Connection terminated unexpectedly: TCP conne...          3       connection          3  data_inconsistent
+21       Connector   Kubernetes pod 'webserver-2' stuck in pending...          1  virtual_machine          1         hypervisor
+22       Connector   Network firewall blocking incoming connection...          3       connection          3  data_inconsistent
+23       Connector   Cloud provider authentication failure; verify...          4            cloud          4         kubernetes
+24       Connector   High network jitter detected: unstable latenc...          2      performance          2              cloud
+25       Connector   Connection rejected due to security policy on...          3       connection          3  data_inconsistent
+26       Connector   Kubernetes service 'frontend' unavailable; ta...          1  virtual_machine          1         hypervisor
+27       Connector   Network route misconfiguration: incorrect rou...          0           memory          0      service_alert
+28       Connector   Connection dropped due to load balancer failu...          3       connection          3  data_inconsistent
+29       Connector   Cloud storage service 's3' inaccessible; chec...          4            cloud          4         kubernetes
+30       Connector   Network switch 'switch-1' experiencing high C...          4            cloud          4         kubernetes
+31       Connector   Alert: Device 'router-1' offline; network con...          3       connection          3  data_inconsistent
+32       Connector   Disk failure detected in cloud instance 'inst...          4            cloud          4         kubernetes
+33       Connector   Network interface 'eth1' in Kubernetes node '...          0           memory          0      service_alert
+34       Connector   Connection failure: unable to establish VPN t...          3       connection          3  data_inconsistent
+35       Connector   CPU utilization spike detected in cloud serve...          4            cloud          4         kubernetes
+36       Connector   Network cable unplugged from device 'switch-2...          4            cloud          4         kubernetes
+37       Connector   Kubernetes node 'worker-4' experiencing high ...          0           memory          0      service_alert
+38       Connector   Alert: Disk space utilization exceeded thresh...          4            cloud          4         kubernetes
+39       Connector   Network link 'eth2' in Kubernetes pod 'app-4'...          1  virtual_machine          4         kubernetes
+40       Connector   Connection refused: remote server 'db.example...          3       connection          3  data_inconsistent
+41       Connector   High network latency observed between datacen...          2      performance          2              cloud
+42       Connector   Cloud provider API rate limit exceeded; conne...          3       connection          3  data_inconsistent
+43       Connector   Kubernetes pod 'backend-3' not responding to ...          1  virtual_machine          1         hypervisor
+44       Connector   Network loop detected: packet storm causing b...          0           memory          0      service_alert
+45       Connector   Connection attempt timed out: unable to estab...          3       connection          3  data_inconsistent
+46       Connector   Cloud storage 'bucket-2' quota reached; unabl...          4            cloud          4         kubernetes
+47       Connector   Network device 'firewall-1' crashed; no traff...          3       connection          3  data_inconsistent
+48       Connector   Kubernetes cluster certificate expired; API s...          3       connection          3  data_inconsistent
+49       Connector   Connection failed: SSL/TLS handshake error wh...          3       connection          3  data_inconsistent
+50       Connector   Network interface 'eth0' in Kubernetes node '...          4            cloud          4         kubernetes
+51       Connector   Cloud provider API timeout: unable to retriev...          4            cloud          4         kubernetes
+52       Connector   Connection failure: DNS resolution error for ...          3       connection          3  data_inconsistent
+53       Connector   Kubernetes pod 'app-5' stuck in terminating s...          2      performance          2              cloud
+54       Connector   Alert: Network congestion detected on switch ...          4            cloud          4         kubernetes
+55       Connector   Connection refused: destination server 'api.e...          3       connection          3  data_inconsistent
+56       Connector   Cloud provider authentication token expired; ...          2      performance          2              cloud
+57       Connector   Kubernetes cluster network partitioned: commu...          2      performance          2              cloud
+58       Connector   Connection reset by firewall 'fw-2': TCP conn...          3       connection          3  data_inconsistent
+59       Connector   Network packet loss observed on VPN tunnel 't...          3       connection          3  data_inconsistent
+60       Connector   Cloud resource 'database-1' experiencing high...          4            cloud          4         kubernetes
+61       Connector   Inconsistent network latency between cloud re...          2      performance          2              cloud
+62       Connector   Connection terminated by client: unexpected t...          3       connection          3  data_inconsistent
+63       Connector   Kubernetes pod 'webserver-3' unable to access...          1  virtual_machine          4         kubernetes
+64       Connector   Network firewall misconfiguration: incorrect ...          0           memory          0      service_alert
+65       Connector   Cloud provider API service degradation: incre...          4            cloud          4         kubernetes
+66       Connector   Kubernetes service 'frontend' misconfigured; ...          1  virtual_machine          1         hypervisor
+67       Connector   Connection dropped: load balancer 'lb-2' reac...          3       connection          3  data_inconsistent
+68       Connector   Cloud storage service 'blob-1' unreachable; v...          0           memory          0      service_alert
+69       Connector   Network switch 'switch-4' firmware upgrade in...          4            cloud          4         kubernetes
+70       Connector   Alert: Device 'router-2' experiencing high CP...          0           memory          0      service_alert
+71       Connector   Disk failure in cloud instance 'instance-4'; ...          4            cloud          4         kubernetes
+72       Connector   Network interface 'eth1' in Kubernetes node '...          0           memory          0      service_alert
+73       Connector   Connection failure: SSL certificate verificat...          3       connection          3  data_inconsistent
+74       Connector   High network latency observed between cloud r...          2      performance          2              cloud
+75       Connector   Cloud provider API request throttling: connec...          4            cloud          4         kubernetes
+76       Connector   Kubernetes pod 'backend-4' not responding to ...          1  virtual_machine          1         hypervisor
+77       Connector   Network loop detected: spanning tree converge...          0           memory          0      service_alert
+78       Connector   Connection timeout: no response from remote s...          3       connection          3  data_inconsistent
+79       Connector   Cloud storage 's3' data corruption detected; ...          4            cloud          4         kubernetes
+80       Connector   Network device 'switch-5' experiencing freque...          4            cloud          4         kubernetes
+81       Connector   Kubernetes node 'worker-3' memory leak detect...          0           memory          0      service_alert
+82       Connector   Alert: Disk space utilization critical in clo...          4            cloud          3  data_inconsistent
+83       Connector   Network link 'eth2' in Kubernetes pod 'app-6'...          1  virtual_machine          1         hypervisor
+84       Connector   Connection refused: database server 'db.examp...          3       connection          3  data_inconsistent
+85       Connector   High network latency observed within datacent...          2      performance          2              cloud
+86       Connector   Cloud provider API access denied: unauthorize...          4            cloud          4         kubernetes
+87       Connector   Kubernetes pod 'frontend-5' repeatedly crashi...          1  virtual_machine          1         hypervisor
+88       Connector   Network interface 'eth3' in Kubernetes node '...          0           memory          0      service_alert
+89       Connector   Connection failed: VPN tunnel 'tunnel-2' nego...          3       connection          3  data_inconsistent
+90       Connector   Cloud instance 'vm-4' CPU overutilization; pe...          4            cloud          4         kubernetes
+91       Connector   Network cable unplugged from device 'switch-6...          4            cloud          4         kubernetes
+92       Connector   Kubernetes pod 'app-7' unable to access share...          3       connection          3  data_inconsistent
+93       Connector   Connection dropped: load balancer 'lb-3' unab...          3       connection          3  data_inconsistent
+94       Connector   Cloud storage 'bucket-3' permission denied; u...          4            cloud          4         kubernetes
+95       Connector   Network switch 'switch-7' firmware update fai...          1  virtual_machine          1         hypervisor
+96       Connector   Alert: Device 'firewall-3' in bypass mode; no...          3       connection          3  data_inconsistent
+97       Connector   Disk failure in Kubernetes persistent volume ...          4            cloud          4         kubernetes
+98       Connector   Network interface 'eth4' in cloud instance 'v...          4            cloud          4         kubernetes
+99       Connector   Connection failure: SSL certificate expired f...          3       connection          3  data_inconsistent
+100    Performance   Alert: High CPU utilization detected in Kuber...          0           memory          0      service_alert
+101    Performance   Network latency spike observed between nodes ...          4            cloud          4         kubernetes
+102    Performance   Virtual machine 'vm-1' experiencing memory co...          4            cloud          4         kubernetes
+103    Performance   Hypervisor 'hypervisor-1' CPU saturation dete...          4            cloud          4         kubernetes
+104    Performance   Cloud provider API response time exceeding th...          4            cloud          4         kubernetes
+105    Performance   Kubernetes pod 'webserver-1' response time de...          1  virtual_machine          1         hypervisor
+106    Performance   Network bandwidth saturation observed on inte...          4            cloud          4         kubernetes
+107    Performance   VM 'vm-2' disk I/O latency exceeding normal t...          4            cloud          4         kubernetes
+108    Performance   Hypervisor 'hypervisor-2' experiencing high m...          0           memory          0      service_alert
+109    Performance   Cloud storage 'bucket-1' read/write latency i...          4            cloud          4         kubernetes
+110    Performance   Alert: CPU contention detected in Kubernetes ...          0           memory          0      service_alert
+111    Performance   Network congestion observed on subnet 'subnet...          0           memory          0      service_alert
+112    Performance   VM 'vm-3' network throughput degradation; pot...          4            cloud          4         kubernetes
+113    Performance   Hypervisor 'hypervisor-3' storage latency spi...          4            cloud          4         kubernetes
+114    Performance   Cloud provider API rate limiting; increased r...          4            cloud          4         kubernetes
+115    Performance   Kubernetes pod 'app-2' response time exceedin...          4            cloud          4         kubernetes
+116    Performance   Network packet loss observed between cloud re...          2      performance          2              cloud
+117    Performance   VM 'vm-4' experiencing high CPU steal time; p...          4            cloud          4         kubernetes
+118    Performance   Hypervisor 'hypervisor-4' network connectivit...          4            cloud          4         kubernetes
+119    Performance   Cloud provider API service degradation; incre...          4            cloud          3  data_inconsistent
+120    Performance   Alert: Memory ballooning observed in Kubernet...          0           memory          0      service_alert
+121    Performance   Network bandwidth limitation on interface 'et...          1  virtual_machine          1         hypervisor
+122    Performance   VM 'vm-5' disk space utilization nearing capa...          4            cloud          4         kubernetes
+123    Performance   Hypervisor 'hypervisor-5' CPU overcommitment;...          4            cloud          4         kubernetes
+124    Performance   Cloud storage 'bucket-2' experiencing slow re...          4            cloud          4         kubernetes
+125    Performance   Kubernetes pod 'webserver-2' excessive memory...          0           memory          0      service_alert
+126    Performance   Network routing misconfiguration detected; su...          0           memory          0      service_alert
+127    Performance   VM 'vm-6' network adapter driver issue; inter...          4            cloud          4         kubernetes
+128    Performance   Hypervisor 'hypervisor-6' storage connectivit...          4            cloud          4         kubernetes
+129    Performance   Cloud provider API request queuing; increased...          4            cloud          4         kubernetes
+130    Performance   Alert: CPU throttling in Kubernetes pod 'app-...          0           memory          0      service_alert
+131    Performance   Network QoS misconfiguration; improper bandwi...          2      performance          2              cloud
+132    Performance   VM 'vm-7' experiencing disk I/O contention; i...          4            cloud          4         kubernetes
+133    Performance   Hypervisor 'hypervisor-7' network adapter fai...          4            cloud          4         kubernetes
+134    Performance   Cloud storage 'bucket-3' high object retrieva...          4            cloud          4         kubernetes
+135    Performance   Kubernetes pod 'backend-1' excessive network ...          1  virtual_machine          1         hypervisor
+136    Performance   Network switch 'switch-1' buffer overflow; in...          4            cloud          4         kubernetes
+137    Performance   VM 'vm-8' memory ballooning; increased swappi...          4            cloud          4         kubernetes
+138    Performance   Hypervisor 'hypervisor-8' storage network con...          4            cloud          4         kubernetes
+139    Performance   Cloud provider API service unavailability; de...          4            cloud          4         kubernetes
+140    Performance   Alert: CPU spikes in Kubernetes node 'worker-...          0           memory          0      service_alert
+141    Performance   Network bandwidth limitation on VLAN 'vlan1';...          1  virtual_machine          1         hypervisor
+142    Performance   VM 'vm-9' experiencing high disk latency; pot...          4            cloud          4         kubernetes
+143    Performance   Hypervisor 'hypervisor-9' CPU thermal throttl...          0           memory          0      service_alert
+144    Performance   Cloud storage 'bucket-4' slow data replicatio...          4            cloud          4         kubernetes
+145    Performance   Kubernetes pod 'app-4' high network jitter; p...          2      performance          2              cloud
+146    Performance   Network switch 'switch-2' interface errors; p...          4            cloud          4         kubernetes
+147    Performance   VM 'vm-10' disk I/O saturation; increased lat...          4            cloud          4         kubernetes
+148    Performance   Hypervisor 'hypervisor-10' network port flapp...          4            cloud          4         kubernetes
+149    Performance   Cloud provider API response time degradation;...          4            cloud          4         kubernetes
+150    Performance   Alert: Memory pressure detected in Kubernetes...          0           memory          0      service_alert
+151    Performance   Network congestion observed on VLAN 'vlan2'; ...          1  virtual_machine          1         hypervisor
+152    Performance   VM 'vm-11' CPU utilization exceeding threshol...          4            cloud          4         kubernetes
+153    Performance   Hypervisor 'hypervisor-11' storage latency de...          4            cloud          4         kubernetes
+154    Performance   Cloud provider API rate limiting; increased r...          4            cloud          4         kubernetes
+155    Performance   Kubernetes pod 'webserver-3' response time de...          1  virtual_machine          1         hypervisor
+156    Performance   Network packet loss observed between cloud re...          2      performance          2              cloud
+157    Performance   VM 'vm-12' experiencing high CPU steal time; ...          4            cloud          4         kubernetes
+158    Performance   Hypervisor 'hypervisor-12' network connectivi...          4            cloud          4         kubernetes
+159    Performance   Cloud provider API service degradation; incre...          4            cloud          3  data_inconsistent
+160    Performance   Alert: Memory ballooning observed in Kubernet...          0           memory          0      service_alert
+161    Performance   Network bandwidth limitation on interface 'et...          1  virtual_machine          1         hypervisor
+162    Performance   VM 'vm-13' disk space utilization nearing cap...          4            cloud          4         kubernetes
+163    Performance   Hypervisor 'hypervisor-13' CPU overcommitment...          4            cloud          4         kubernetes
+164    Performance   Cloud storage 'bucket-5' experiencing slow re...          4            cloud          4         kubernetes
+165    Performance   Kubernetes pod 'app-6' excessive memory usage...          0           memory          0      service_alert
+166    Performance   Network routing misconfiguration detected; su...          0           memory          0      service_alert
+167    Performance   VM 'vm-14' network adapter driver issue; inte...          4            cloud          4         kubernetes
+168    Performance   Hypervisor 'hypervisor-14' storage connectivi...          4            cloud          4         kubernetes
+169    Performance   Cloud provider API request queuing; increased...          4            cloud          4         kubernetes
+170    Performance   Alert: CPU throttling in Kubernetes pod 'app-...          0           memory          0      service_alert
+171    Performance   Network QoS misconfiguration; improper bandwi...          2      performance          2              cloud
+172    Performance   VM 'vm-15' experiencing disk I/O contention; ...          4            cloud          4         kubernetes
+173    Performance   Hypervisor 'hypervisor-15' network adapter fa...          4            cloud          4         kubernetes
+174    Performance   Cloud storage 'bucket-6' high object retrieva...          4            cloud          4         kubernetes
+175    Performance   Kubernetes pod 'backend-2' excessive network ...          1  virtual_machine          1         hypervisor
+176    Performance   Network switch 'switch-3' buffer overflow; in...          4            cloud          4         kubernetes
+177    Performance   VM 'vm-16' memory ballooning; increased swapp...          4            cloud          4         kubernetes
+178    Performance   Hypervisor 'hypervisor-16' storage network co...          4            cloud          4         kubernetes
+179    Performance   Cloud provider API service unavailability; de...          4            cloud          4         kubernetes
+180    Performance   Alert: CPU spikes in Kubernetes node 'worker-...          0           memory          0      service_alert
+181    Performance   Network bandwidth limitation on VLAN 'vlan3';...          1  virtual_machine          1         hypervisor
+182    Performance   VM 'vm-17' experiencing high disk latency; po...          4            cloud          4         kubernetes
+183    Performance   Hypervisor 'hypervisor-17' CPU thermal thrott...          0           memory          0      service_alert
+184    Performance   Cloud storage 'bucket-7' slow data replicatio...          4            cloud          4         kubernetes
+185    Performance   Kubernetes pod 'app-8' high network jitter; p...          2      performance          2              cloud
+186    Performance   Network switch 'switch-4' interface errors; p...          4            cloud          4         kubernetes
+187    Performance   VM 'vm-18' disk I/O saturation; increased lat...          4            cloud          4         kubernetes
+188    Performance   Hypervisor 'hypervisor-18' network port flapp...          4            cloud          4         kubernetes
+189    Performance   Cloud provider API response time degradation;...          4            cloud          4         kubernetes
+190    Performance   Alert: Memory pressure detected in Kubernetes...          0           memory          0      service_alert
+191    Performance   Network congestion observed on VLAN 'vlan4'; ...          1  virtual_machine          1         hypervisor
+192    Performance   VM 'vm-19' CPU utilization exceeding threshol...          4            cloud          4         kubernetes
+193    Performance   Hypervisor 'hypervisor-19' storage latency de...          4            cloud          4         kubernetes
+194    Performance   Cloud provider API rate limiting; increased r...          4            cloud          4         kubernetes
+195    Performance   Kubernetes pod 'webserver-4' response time de...          1  virtual_machine          1         hypervisor
+196    Performance   Network packet loss observed between cloud re...          2      performance          2              cloud
+197    Performance   VM 'vm-20' experiencing high CPU steal time; ...          4            cloud          4         kubernetes
+198    Performance   Hypervisor 'hypervisor-20' network connectivi...          4            cloud          4         kubernetes
+199    Performance   Cloud provider API service degradation; incre...          4            cloud          3  data_inconsistent
+200        Costing   Alert: High monthly cost detected in cloud ac...          0           memory          0      service_alert
+201        Costing   Kubernetes cluster cost exceeding expected th...          1  virtual_machine          1         hypervisor
+202        Costing   Network bandwidth utilization exceeding alloc...          4            cloud          4         kubernetes
+203        Costing   Virtual machine 'vm-1' running on idle state;...          1  virtual_machine          1         hypervisor
+204        Costing   Hypervisor 'hypervisor-1' resource waste dete...          1  virtual_machine          1         hypervisor
+205        Costing   Cloud provider API usage cost surpassing allo...          4            cloud          4         kubernetes
+206        Costing   Kubernetes pod 'app-1' consuming excessive re...          1  virtual_machine          1         hypervisor
+207        Costing   Network egress charges exceeding anticipated ...          4            cloud          4         kubernetes
+208        Costing   VM 'vm-2' underutilized; consider resizing or...          1  virtual_machine          1         hypervisor
+209        Costing   Hypervisor 'hypervisor-2' idle VMs consuming ...          1  virtual_machine          1         hypervisor
+210        Costing   Cloud storage 'bucket-1' storage costs exceed...          4            cloud          4         kubernetes
+211        Costing   Alert: Unexpected spike in cloud resource cos...          2      performance          2              cloud
+212        Costing   Kubernetes cluster idle nodes incurring unnec...          1  virtual_machine          1         hypervisor
+213        Costing   Network transfer costs higher than projected;...          4            cloud          4         kubernetes
+214        Costing   VM 'vm-3' running on expensive instance type;...          4            cloud          4         kubernetes
+215        Costing   Hypervisor 'hypervisor-3' VMs with unused sna...          1  virtual_machine          1         hypervisor
+216        Costing   Cloud provider API requests exceeding budgete...          4            cloud          4         kubernetes
+217        Costing   Kubernetes pod 'app-2' over-provisioned with ...          1  virtual_machine          1         hypervisor
+218        Costing   Network egress charges increasing rapidly; in...          4            cloud          4         kubernetes
+219        Costing   VM 'vm-4' unused for an extended period; cons...          4            cloud          0      service_alert
+220        Costing   Hypervisor 'hypervisor-4' inefficient power m...          0           memory          0      service_alert
+221        Costing   Cloud storage 'bucket-2' data redundancy cost...          4            cloud          4         kubernetes
+222        Costing   Alert: Unallocated cloud resources incurring ...          2      performance          2              cloud
+223        Costing   Kubernetes cluster scaling inefficiencies; op...          1  virtual_machine          1         hypervisor
+224        Costing   Network transfer costs higher during peak hou...          4            cloud          4         kubernetes
+225        Costing   VM 'vm-5' with suboptimal cost-to-performance...          0           memory          0      service_alert
+226        Costing   Hypervisor 'hypervisor-5' VMs with unoptimize...          1  virtual_machine          1         hypervisor
+227        Costing   Cloud provider API pricing model change; revi...          0           memory          0      service_alert
+228        Costing   Kubernetes pod 'app-3' with unnecessary exter...          0           memory          0      service_alert
+229        Costing   Network egress charges increasing due to unau...          4            cloud          4         kubernetes
+230        Costing   Alert: Unexpected increase in cloud storage c...          4            cloud          2              cloud
+231        Costing   Kubernetes cluster with underutilized nodes i...          1  virtual_machine          1         hypervisor
+232        Costing   Network transfer costs impacted by inefficien...          4            cloud          4         kubernetes
+233        Costing   VM 'vm-6' with suboptimal storage configurati...          0           memory          0      service_alert
+234        Costing   Hypervisor 'hypervisor-6' VMs with excessive ...          1  virtual_machine          1         hypervisor
+235        Costing   Cloud provider API usage spikes leading to co...          4            cloud          4         kubernetes
+236        Costing   Kubernetes pod 'app-4' with unnecessary resou...          2      performance          2              cloud
+237        Costing   Network egress charges exceeding budget due t...          4            cloud          4         kubernetes
+238        Costing   VM 'vm-7' with suboptimal network bandwidth a...          0           memory          0      service_alert
+239        Costing   Hypervisor 'hypervisor-7' VMs with unoptimize...          1  virtual_machine          1         hypervisor
+240        Costing   Alert: Unexpected increase in cloud compute c...          2      performance          2              cloud
+241        Costing   Kubernetes cluster with unnecessary resource ...          1  virtual_machine          1         hypervisor
+242        Costing   Network transfer costs impacted by inefficien...          4            cloud          4         kubernetes
+243        Costing   VM 'vm-8' with suboptimal power management se...          0           memory          0      service_alert
+244        Costing   Hypervisor 'hypervisor-8' VMs with unoptimize...          1  virtual_machine          1         hypervisor
+245        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud          4         kubernetes
+246        Costing   Kubernetes pod 'app-5' with excessive externa...          0           memory          0      service_alert
+247        Costing   Network egress charges exceeding budget due t...          4            cloud          4         kubernetes
+248        Costing   VM 'vm-9' with suboptimal backup retention po...          1  virtual_machine          1         hypervisor
+249        Costing   Hypervisor 'hypervisor-9' VMs with unoptimize...          1  virtual_machine          1         hypervisor
+250        Costing   Alert: Unexpected increase in cloud service c...          2      performance          2              cloud
+251        Costing   Kubernetes cluster with idle pods incurring u...          1  virtual_machine          1         hypervisor
+252        Costing   Network transfer costs exceeding budget due t...          4            cloud          4         kubernetes
+253        Costing   VM 'vm-10' with suboptimal memory configurati...          0           memory          0      service_alert
+254        Costing   Hypervisor 'hypervisor-10' VMs with unoptimiz...          1  virtual_machine          1         hypervisor
+255        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud          4         kubernetes
+256        Costing   Kubernetes pod 'app-6' with unnecessary datab...          0           memory          0      service_alert
+257        Costing   Network egress charges increasing due to unau...          4            cloud          4         kubernetes
+258        Costing   VM 'vm-11' with suboptimal CPU utilization; a...          0           memory          0      service_alert
+259        Costing   Hypervisor 'hypervisor-11' VMs with unoptimiz...          1  virtual_machine          1         hypervisor
+260        Costing   Cloud storage 'bucket-3' data retrieval costs...          4            cloud          4         kubernetes
+261        Costing   Alert: Unallocated cloud resources incurring ...          2      performance          2              cloud
+262        Costing   Kubernetes cluster scaling inefficiencies; op...          1  virtual_machine          1         hypervisor
+263        Costing   Network transfer costs impacted by inefficien...          4            cloud          4         kubernetes
+264        Costing   VM 'vm-12' with suboptimal disk storage confi...          0           memory          0      service_alert
+265        Costing   Hypervisor 'hypervisor-12' VMs with excessive...          1  virtual_machine          1         hypervisor
+266        Costing   Cloud provider API pricing model change; revi...          0           memory          0      service_alert
+267        Costing   Kubernetes pod 'app-7' with unnecessary exter...          0           memory          0      service_alert
+268        Costing   Network egress charges increasing due to inef...          1  virtual_machine          1         hypervisor
+269        Costing   VM 'vm-13' with suboptimal storage utilizatio...          0           memory          0      service_alert
+270        Costing   Hypervisor 'hypervisor-13' VMs with unoptimiz...          0           memory          0      service_alert
+271        Costing   Cloud provider API usage spikes leading to co...          4            cloud          4         kubernetes
+272        Costing   Kubernetes pod 'app-8' with excessive resourc...          2      performance          2              cloud
+273        Costing   Network egress charges impacted by inefficien...          4            cloud          4         kubernetes
+274        Costing   VM 'vm-14' with suboptimal network bandwidth ...          0           memory          0      service_alert
+275        Costing   Hypervisor 'hypervisor-14' VMs with unoptimiz...          1  virtual_machine          1         hypervisor
+276        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud          4         kubernetes
+277        Costing   Kubernetes pod 'app-9' with unnecessary resou...          2      performance          2              cloud
+278        Costing   Network egress charges exceeding budget due t...          4            cloud          4         kubernetes
+279        Costing   VM 'vm-15' with suboptimal power management s...          0           memory          0      service_alert
+280        Costing   Hypervisor 'hypervisor-15' VMs with unoptimiz...          1  virtual_machine          1         hypervisor
+281        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud          4         kubernetes
+282        Costing   Kubernetes pod 'app-10' with excessive extern...          0           memory          0      service_alert
+283        Costing   Network egress charges exceeding budget due t...          4            cloud          4         kubernetes
+284        Costing   VM 'vm-16' with suboptimal backup retention p...          1  virtual_machine          1         hypervisor
+285        Costing   Hypervisor 'hypervisor-16' VMs with unoptimiz...          1  virtual_machine          1         hypervisor
+286        Costing   Cloud provider API usage exceeding allocated ...          4            cloud          4         kubernetes
+287        Costing   Kubernetes pod 'app-11' with unnecessary reso...          1  virtual_machine          2              cloud
+288        Costing   Network egress charges increasing due to inef...          1  virtual_machine          1         hypervisor
+289        Costing   VM 'vm-17' with suboptimal network security c...          0           memory          0      service_alert
+290        Costing   Hypervisor 'hypervisor-17' VMs with unoptimiz...          1  virtual_machine          1         hypervisor
+291        Costing   Cloud storage 'bucket-4' data transfer costs ...          4            cloud          4         kubernetes
+292        Costing   Alert: Unexpected increase in cloud compute c...          2      performance          2              cloud
+293        Costing   Kubernetes cluster with underutilized nodes i...          1  virtual_machine          1         hypervisor
+294        Costing   Network transfer costs impacted by inefficien...          4            cloud          4         kubernetes
+295        Costing   VM 'vm-18' with suboptimal storage performanc...          0           memory          0      service_alert
+296        Costing   Hypervisor 'hypervisor-18' VMs with unoptimiz...          1  virtual_machine          1         hypervisor
+297        Costing   Cloud provider API usage inefficiencies leadi...          4            cloud          4         kubernetes
+298        Costing   Kubernetes pod 'app-12' with excessive databa...          0           memory          0      service_alert
+299        Costing   Network egress charges increasing due to unau...          4            cloud          4         kubernetes
+300      SaaSInfra   Alert: High latency detected in SaaS applicat...          2      performance          2              cloud
+301      SaaSInfra   Database connectivity issue in SaaS platform;...          3       connection          3  data_inconsistent
+302      SaaSInfra   Performance degradation in SaaS service 'Serv...          3       connection          0      service_alert
+303      SaaSInfra   Alert: Increased error rates in SaaS API resp...          3       connection          3  data_inconsistent
+304      SaaSInfra   Storage capacity nearing threshold in SaaS in...          4            cloud          3  data_inconsistent
+305      SaaSInfra   SaaS platform experiencing high CPU utilizati...          0           memory          0      service_alert
+306      SaaSInfra   Network connectivity issue impacting SaaS ser...          3       connection          3  data_inconsistent
+307      SaaSInfra   Alert: Unexpected downtime in SaaS applicatio...          2      performance          2              cloud
+308      SaaSInfra   Resource contention observed in SaaS infrastr...          2      performance          2              cloud
+309      SaaSInfra   Data synchronization issue between SaaS insta...          2      performance          2              cloud
+310      SaaSInfra   Alert: High memory consumption in SaaS platfo...          0           memory          0      service_alert
+311      SaaSInfra   Database query performance degradation in Saa...          4            cloud          4         kubernetes
+312      SaaSInfra   Network firewall misconfiguration in SaaS inf...          3       connection          3  data_inconsistent
+313      SaaSInfra   Alert: Increased response time in SaaS servic...          3       connection          3  data_inconsistent
+314      SaaSInfra   Disk I/O latency issue in SaaS platform; opti...          3       connection          3  data_inconsistent
+315      SaaSInfra   Alert: Unusual network traffic pattern detect...          3       connection          3  data_inconsistent
+316      SaaSInfra   Data replication failure in SaaS environment;...          2      performance          2              cloud
+317      SaaSInfra   Alert: SaaS application 'App-4' unresponsive;...          3       connection          3  data_inconsistent
+318      SaaSInfra   Load balancer misconfiguration in SaaS infras...          3       connection          3  data_inconsistent
+319      SaaSInfra   Alert: Database server crash in SaaS platform...          2      performance          2              cloud
+320      SaaSInfra   SaaS service 'Service-3' experiencing frequen...          0           memory          0      service_alert
+321      SaaSInfra   Alert: Infrastructure scaling failure in SaaS...          3       connection          3  data_inconsistent
+322      SaaSInfra   DNS resolution problem impacting SaaS applica...          3       connection          3  data_inconsistent
+323      SaaSInfra   Alert: Service request queue build-up in SaaS...          0           memory          0      service_alert
+324      SaaSInfra   Certificate expiration issue in SaaS infrastr...          3       connection          3  data_inconsistent
+325      SaaSInfra   Alert: Authentication service outage in SaaS ...          2      performance          2              cloud
+326      SaaSInfra   Database backup failure in SaaS platform; inv...          0           memory          0      service_alert
+327      SaaSInfra   Alert: Unexpected data loss in SaaS applicati...          2      performance          2              cloud
+328      SaaSInfra   Inadequate logging and monitoring in SaaS inf...          3       connection          3  data_inconsistent
+329      SaaSInfra   Alert: Increased CPU contention in SaaS servi...          0           memory          0      service_alert
+330      SaaSInfra   Network load balancer failure impacting SaaS ...          3       connection          3  data_inconsistent
+331      SaaSInfra   Alert: Configuration inconsistency detected i...          3       connection          3  data_inconsistent
+332      SaaSInfra   Disk space exhaustion in SaaS platform; optim...          3       connection          3  data_inconsistent
+333      SaaSInfra   Alert: Unstable network connectivity in SaaS ...          2      performance          2              cloud
+334      SaaSInfra   Database replication lag in SaaS application ...          3       connection          3  data_inconsistent
+335      SaaSInfra   Alert: Infrastructure component failure in Sa...          3       connection          3  data_inconsistent
+336      SaaSInfra   Inefficient caching mechanism in SaaS infrast...          3       connection          3  data_inconsistent
+337      SaaSInfra   Alert: Increased database response time in Sa...          3       connection          3  data_inconsistent
+338      SaaSInfra   Resource exhaustion observed in SaaS environm...          3       connection          3  data_inconsistent
+339      SaaSInfra   Alert: API rate limiting issue in SaaS platfo...          3       connection          3  data_inconsistent
+340      SaaSInfra   Inconsistent data synchronization across SaaS...          2      performance          2              cloud
+341      SaaSInfra   Alert: Unresponsive third-party integration i...          2      performance          2              cloud
+342      SaaSInfra   Inadequate disaster recovery mechanisms in Sa...          0           memory          0      service_alert
+343      SaaSInfra   Alert: Service degradation in SaaS applicatio...          3       connection          3  data_inconsistent
+344      SaaSInfra   Database deadlock issue impacting SaaS platfo...          2      performance          2              cloud
+345      SaaSInfra   Alert: Infrastructure deployment failure in S...          2      performance          2              cloud
+346      SaaSInfra   Inefficient query execution plan in SaaS data...          4            cloud          4         kubernetes
+347      SaaSInfra   Alert: Increased memory leaks in SaaS service...          0           memory          0      service_alert
+348      SaaSInfra   Network congestion issue impacting SaaS appli...          1  virtual_machine          1         hypervisor
+349      SaaSInfra   Alert: Inconsistent service availability in S...          3       connection          3  data_inconsistent
+350      SaaSInfra   Alert: Increased API response errors in SaaS ...          2      performance          2              cloud
+351      SaaSInfra   Inadequate service monitoring in SaaS infrast...          3       connection          3  data_inconsistent
+352      SaaSInfra   Alert: High CPU usage in SaaS application 'Ap...          0           memory          0      service_alert
+353      SaaSInfra   Network misconfiguration impacting SaaS servi...          0           memory          0      service_alert
+354      SaaSInfra   Alert: Database performance degradation in Sa...          3       connection          3  data_inconsistent
+355      SaaSInfra   Inefficient data indexing in SaaS application...          4            cloud          2              cloud
+356      SaaSInfra   Alert: Unusual traffic pattern detected in Sa...          3       connection          3  data_inconsistent
+357      SaaSInfra   Insufficient redundancy in SaaS infrastructur...          3       connection          1         hypervisor
+358      SaaSInfra   Alert: Service request backlog building up in...          0           memory          0      service_alert
+359      SaaSInfra   Inadequate disaster recovery testing in SaaS ...          0           memory          0      service_alert
+360      SaaSInfra   Alert: Unauthorized access attempt detected i...          3       connection          3  data_inconsistent
+361      SaaSInfra   Insufficient caching mechanisms in SaaS platf...          3       connection          3  data_inconsistent
+362      SaaSInfra   Alert: Database connection pool exhaustion in...          3       connection          3  data_inconsistent
+363      SaaSInfra   Inconsistent data replication across SaaS ins...          2      performance          2              cloud
+364      SaaSInfra   Alert: Infrastructure resource contention in ...          2      performance          2              cloud
+365      SaaSInfra   Inadequate error handling in SaaS application...          3       connection          3  data_inconsistent
+366      SaaSInfra   Alert: Increased database query execution tim...          4            cloud          4         kubernetes
+367      SaaSInfra   Insufficient backup and restore procedures in...          2      performance          2              cloud
+368      SaaSInfra   Alert: Service interruption in SaaS applicati...          3       connection          3  data_inconsistent
+369      SaaSInfra   Inefficient data storage utilization in SaaS ...          0           memory          0      service_alert
+370      SaaSInfra   Alert: Unresponsive third-party service integ...          2      performance          2              cloud
+371      SaaSInfra   Inadequate logging and auditing in SaaS infra...          3       connection          3  data_inconsistent
+372      SaaSInfra   Alert: Infrastructure scaling issues in SaaS ...          3       connection          3  data_inconsistent
+373      SaaSInfra   Inefficient data migration processes in SaaS ...          2      performance          2              cloud
+374      SaaSInfra   Alert: Increased response time in SaaS servic...          3       connection          3  data_inconsistent
+375      SaaSInfra   Insufficient data encryption mechanisms in Sa...          3       connection          3  data_inconsistent
+376      SaaSInfra   Alert: Configuration drift detected in SaaS e...          2      performance          2              cloud
+377      SaaSInfra   Inadequate user access controls in SaaS appli...          3       connection          3  data_inconsistent
+378      SaaSInfra   Alert: Infrastructure component failure in Sa...          3       connection          3  data_inconsistent
+379      SaaSInfra   Inefficient resource allocation in SaaS envir...          2      performance          2              cloud
+380      SaaSInfra   Alert: Database deadlock detected in SaaS app...          2      performance          2              cloud
+381      SaaSInfra   Inadequate load testing in SaaS infrastructur...          3       connection          3  data_inconsistent
+382      SaaSInfra   Alert: Increased memory utilization in SaaS s...          0           memory          0      service_alert
+383      SaaSInfra   Inconsistent service availability across SaaS...          3       connection          3  data_inconsistent
+384      SaaSInfra   Alert: Infrastructure deployment errors in Sa...          2      performance          2              cloud
+385      SaaSInfra   Inadequate data backup frequency in SaaS plat...          0           memory          0      service_alert
+386      SaaSInfra   Alert: Inefficient API usage in SaaS applicat...          4            cloud          4         kubernetes
+387      SaaSInfra   Network latency issue impacting SaaS service ...          3       connection          3  data_inconsistent
+388      SaaSInfra   Alert: Unstable database connection in SaaS e...          3       connection          3  data_inconsistent
+389      SaaSInfra   Inadequate system health monitoring in SaaS i...          1  virtual_machine          1         hypervisor
+390      SaaSInfra   Alert: Increased disk I/O latency in SaaS pla...          3       connection          3  data_inconsistent
+391      SaaSInfra   Inefficient data caching strategies in SaaS a...          3       connection          3  data_inconsistent
+392      SaaSInfra   Alert: Network congestion observed in SaaS en...          2      performance          2              cloud
+393      SaaSInfra   Inadequate disaster recovery documentation in...          3       connection          3  data_inconsistent
+394      SaaSInfra   Alert: Service request processing delays in S...          3       connection          0      service_alert
+395      SaaSInfra   Inconsistent data validation in SaaS applicat...          4            cloud          4         kubernetes
+396      SaaSInfra   Alert: Increased CPU contention in SaaS envir...          0           memory          0      service_alert
+397      SaaSInfra   Insufficient database connection pooling in S...          3       connection          3  data_inconsistent
+398      SaaSInfra   Alert: Unusual system resource consumption in...          2      performance          2              cloud
+399      SaaSInfra   Inadequate service level agreement (SLA) moni...          3       connection          3  data_inconsistent
+400  Miscellaneous   Alert: Unrecognized system error code encount...          2      performance          2              cloud
+401  Miscellaneous   Unexpected application behavior reported; inv...          2      performance          2              cloud
+402  Miscellaneous   Alert: File corruption detected in critical s...          3       connection          3  data_inconsistent
+403  Miscellaneous   Unresponsive system monitoring tool identifie...          2      performance          2              cloud
+404  Miscellaneous   Alert: Inconsistent data replication in distr...          2      performance          2              cloud
+405  Miscellaneous   Unstable system behavior observed during sche...          2      performance          2              cloud
+406  Miscellaneous   Alert: Insufficient disk space for log files;...          3       connection          3  data_inconsistent
+407  Miscellaneous   Unpredictable system response time reported b...          3       connection          3  data_inconsistent
+408  Miscellaneous   Alert: Incompatible software library version ...          3       connection          3  data_inconsistent
+409  Miscellaneous   Unexpected data loss reported; investigate an...          2      performance          2              cloud
+410  Miscellaneous   Alert: Unresponsive system backup process; in...          0           memory          0      service_alert
+411  Miscellaneous   Unscheduled system restart detected; investig...          2      performance          2              cloud
+412  Miscellaneous   Alert: High memory consumption in system comp...          0           memory          0      service_alert
+413  Miscellaneous   Unstable system behavior observed after recen...          2      performance          2              cloud
+414  Miscellaneous   Alert: Inconsistent data integrity checks acr...          4            cloud          4         kubernetes
+415  Miscellaneous   Unrecognized system resource utilization patt...          2      performance          2              cloud
+416  Miscellaneous   Alert: Unresponsive system task scheduler; in...          2      performance          2              cloud
+417  Miscellaneous   Unexpected system file permission changes rep...          2      performance          2              cloud
+418  Miscellaneous   Alert: Unstable communication between system ...          2      performance          2              cloud
+419  Miscellaneous   Unpredictable system behavior reported on spe...          2      performance          2              cloud
+420  Miscellaneous   Alert: Increased response time in data retrie...          4            cloud          4         kubernetes
+421  Miscellaneous   Unrecognized system log entries reported; inv...          2      performance          2              cloud
+422  Miscellaneous   Alert: Unresponsive system service discovery ...          2      performance          2              cloud
+423  Miscellaneous   Unexpected system crashes reported during spe...          2      performance          2              cloud
+424  Miscellaneous   Alert: High CPU utilization in non-critical s...          0           memory          0      service_alert
+425  Miscellaneous   Unstable system behavior observed during heav...          2      performance          2              cloud
+426  Miscellaneous   Alert: Inconsistent data synchronization betw...          2      performance          2              cloud
+427  Miscellaneous   Unrecognized system software conflict detecte...          2      performance          2              cloud
+428  Miscellaneous   Alert: Unresponsive system resource monitorin...          2      performance          2              cloud
+429  Miscellaneous   Unexpected system behavior reported during sp...          2      performance          2              cloud
+430  Miscellaneous   Alert: Inconsistent data encryption across sy...          4            cloud          4         kubernetes
+431  Miscellaneous   Unrecognized system performance bottleneck id...          2      performance          2              cloud
+432  Miscellaneous   Alert: Unresponsive system notification mecha...          2      performance          2              cloud
+433  Miscellaneous   Unexpected data inconsistency reported; inves...          2      performance          2              cloud
+434  Miscellaneous   Alert: Insufficient system error handling; im...          3       connection          3  data_inconsistent
+435  Miscellaneous   Unrecognized system process contention observ...          2      performance          0      service_alert
+436  Miscellaneous   Alert: Unresponsive system task execution; in...          2      performance          2              cloud
+437  Miscellaneous   Unexpected system behavior reported by specif...          2      performance          2              cloud
+438  Miscellaneous   Alert: Unrecognized system vulnerability dete...          0           memory          0      service_alert
+439  Miscellaneous   Unstable system behavior observed during spec...          2      performance          2              cloud
+440  Miscellaneous   Alert: Inconsistent data formatting across sy...          4            cloud          4         kubernetes
+441  Miscellaneous   Unrecognized system dependency conflict ident...          2      performance          2              cloud
+442  Miscellaneous   Alert: Unresponsive system email notification...          2      performance          2              cloud
+443  Miscellaneous   Unexpected system memory leaks reported; inve...          0           memory          0      service_alert
+444  Miscellaneous   Alert: Inconsistent system clock synchronizat...          2      performance          2              cloud
+445  Miscellaneous   Unrecognized system resource contention obser...          2      performance          2              cloud
+446  Miscellaneous   Alert: Unresponsive system job scheduler; inv...          2      performance          2              cloud
+447  Miscellaneous   Unexpected system behavior reported during sp...          2      performance          2              cloud
+448  Miscellaneous   Alert: Inconsistent data indexing across syst...          2      performance          2              cloud
+449  Miscellaneous   Unrecognized system software instability repo...          2      performance          2              cloud
+450  Miscellaneous   Alert: Unrecognized system log files generate...          2      performance          2              cloud
+451  Miscellaneous   Unexpected system behavior reported after rec...          2      performance          2              cloud
+452  Miscellaneous   Alert: Inconsistent data validation rules acr...          4            cloud          4         kubernetes
+453  Miscellaneous   Unresponsive system resource allocation mecha...          2      performance          2              cloud
+454  Miscellaneous   Alert: High disk fragmentation affecting file...          4            cloud          4         kubernetes
+455  Miscellaneous   Unrecognized system process deadlock detected...          2      performance          2              cloud
+456  Miscellaneous   Alert: Unresponsive system service registry; ...          2      performance          2              cloud
+457  Miscellaneous   Unexpected system response time variations re...          2      performance          2              cloud
+458  Miscellaneous   Alert: Inconsistent data encoding across syst...          4            cloud          4         kubernetes
+459  Miscellaneous   Unrecognized system file corruption detected;...          4            cloud          4         kubernetes
+460  Miscellaneous   Alert: Unresponsive system job queue; investi...          2      performance          2              cloud
+461  Miscellaneous   Unexpected system behavior reported during sp...          2      performance          2              cloud
+462  Miscellaneous   Alert: Inconsistent data partitioning across ...          2      performance          2              cloud
+463  Miscellaneous   Unrecognized system resource contention obser...          2      performance          2              cloud
+464  Miscellaneous   Alert: Unresponsive system deployment automat...          2      performance          2              cloud
+465  Miscellaneous   Unexpected system crashes reported during spe...          2      performance          4         kubernetes
+466  Miscellaneous   Alert: Inconsistent data serialization across...          4            cloud          4         kubernetes
+467  Miscellaneous   Unrecognized system software misconfiguration...          2      performance          2              cloud
+468  Miscellaneous   Alert: Unresponsive system event logging; inv...          2      performance          3  data_inconsistent
+469  Miscellaneous   Unexpected data duplication reported in speci...          2      performance          2              cloud
+470  Miscellaneous   Alert: Inconsistent system messaging formats;...          2      performance          2              cloud
+471  Miscellaneous   Unrecognized system performance degradation r...          2      performance          2              cloud
+472  Miscellaneous   Alert: Unresponsive system monitoring dashboa...          2      performance          2              cloud
+473  Miscellaneous   Unexpected system behavior observed during sp...          2      performance          2              cloud
+474  Miscellaneous   Alert: Inconsistent data deduplication across...          4            cloud          4         kubernetes
+475  Miscellaneous   Unrecognized system memory fragmentation dete...          0           memory          0      service_alert
+476  Miscellaneous   Alert: Unresponsive system workflow scheduler...          2      performance          2              cloud
+477  Miscellaneous   Unexpected system file system errors reported...          2      performance          2              cloud
+478  Miscellaneous   Alert: Inconsistent system logging timestamps...          3       connection          3  data_inconsistent
+479  Miscellaneous   Unrecognized system software compatibility is...          2      performance          2              cloud
+480  Miscellaneous   Alert: Unresponsive system health monitoring;...          2      performance          1         hypervisor
+481  Miscellaneous   Unexpected system behavior reported during sp...          2      performance          2              cloud
+482  Miscellaneous   Alert: Inconsistent data migration across sys...          2      performance          3  data_inconsistent
+483  Miscellaneous   Unrecognized system process inefficiency dete...          0           memory          0      service_alert
+484  Miscellaneous   Alert: Unresponsive system configuration mana...          3       connection          3  data_inconsistent
+485  Miscellaneous   Unexpected data corruption reported in specif...          2      performance          2              cloud
+486  Miscellaneous   Alert: Inconsistent system error reporting; e...          3       connection          3  data_inconsistent
+487  Miscellaneous   Unrecognized system service bottleneck identi...          2      performance          2              cloud
+488  Miscellaneous   Alert: Unresponsive system database connectio...          3       connection          3  data_inconsistent
+489  Miscellaneous   Unexpected system behavior observed during sp...          2      performance          2              cloud
+490  Miscellaneous   Alert: Inconsistent data backup verification;...          0           memory          0      service_alert
+491  Miscellaneous   Unrecognized system software vulnerability di...          0           memory          0      service_alert
+492  Miscellaneous   Alert: Unresponsive system notification syste...          2      performance          2              cloud
+493  Miscellaneous   Unexpected system file system corruption repo...          2      performance          4         kubernetes
+494  Miscellaneous   Alert: Inconsistent data reconciliation acros...          4            cloud          4         kubernetes
+495  Miscellaneous   Unrecognized system resource overutilization ...          2      performance          2              cloud
+496  Miscellaneous   Alert: Unresponsive system log rotation; inve...          2      performance          3  data_inconsistent
+497  Miscellaneous   Unexpected system behavior reported during sp...          2      performance          2              cloud
+498  Miscellaneous   Alert: Inconsistent data caching across syste...          3       connection          3  data_inconsistent
+499  Miscellaneous   Unrecognized system software license violatio...          2      performance          2              cloud
+2023-05-30 13:36:28.522321: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Some layers from the model checkpoint at bert-base-uncased were not used when initializing TFBertModel: ['mlm___cls', 'nsp___cls']
+- This IS expected if you are initializing TFBertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFBertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+All the layers of TFBertModel were initialized from the model checkpoint at bert-base-uncased.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFBertModel for predictions without further training.
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+C:\Users\jayaanan\Python37\lib\site-packages\transformers\tokenization_utils_base.py:2370: FutureWarning: The `pad_to_max_length` argument is deprecated and will be removed in a future version, use `padding=True` or `padding='longest'` to pad to the longest sequence in the batch, or use `padding='max_length'` to pad to a max length. In this case, you can give a specific length with `max_length` (e.g. `max_length=45`) or leave max_length to None to pad to the maximal input size of the model (e.g. 512 for Bert).
+  FutureWarning,
+Epoch 1/5
+11/11 [==============================] - 689s 58s/step - loss: 1.6149 - accuracy: 0.3284
+Epoch 2/5
+11/11 [==============================] - 634s 58s/step - loss: 1.1269 - accuracy: 0.6358
+Epoch 3/5
+11/11 [==============================] - 583s 53s/step - loss: 0.8151 - accuracy: 0.8000
+Epoch 4/5
+11/11 [==============================] - 595s 54s/step - loss: 0.5615 - accuracy: 0.8925
+Epoch 5/5
+11/11 [==============================] - 593s 53s/step - loss: 0.3810 - accuracy: 0.9403
+6/6 [==============================] - 94s 15s/step
+Test Messages:
+Message:   VM 'vm-3' running on expensive instance type; consider resizing to a more cost-effective option.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Network transfer costs higher than projected; analyze data transfer patterns for cost optimization.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Kubernetes pod 'webserver-4' response time degradation; potential bottleneck in application.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Cloud storage 'bucket-5' experiencing slow read/write operations; performance impact on data access.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Inadequate error handling in SaaS application 'App-11'; implement robust error handling mechanisms for better reliability.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Cloud storage 'bucket-3' data retrieval costs exceeding budget; optimize data access patterns and storage usage.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   High network latency observed between datacenter 'DC-1' and 'DC-2'.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: Unresponsive system notification mechanism; investigate and restore notification functionality.
+True Category:  Connector
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Cloud provider API service unavailability; degraded performance for API-related operations.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Connection reset by firewall 'fw-2': TCP connection terminated due to policy violation.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Unrecognized system memory fragmentation detected; investigate and optimize memory management.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   VM 'vm-9' experiencing high disk latency; potential storage backend performance issue.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Unexpected system response time variations reported; investigate and identify the factors causing the variations.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Unexpected system behavior reported during specific user sessions; investigate and address session-specific issues.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Unusual system resource consumption in SaaS infrastructure; investigate and address abnormal resource usage.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   VM 'vm-14' network adapter driver issue; intermittent packet loss and reduced throughput.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Kubernetes pod 'app-4' high network jitter; potential network instability and packet loss.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Network egress charges impacted by inefficient data deduplication methods; optimize data deduplication for cost savings.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Inconsistent data validation rules across system components; implement uniform data validation standards.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Kubernetes cluster idle nodes incurring unnecessary cost; optimize node scaling and utilization.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Network egress charges increasing due to unauthorized access or data leakage; investigate and secure network resources.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Increased memory utilization in SaaS service 'Service-8'; optimize memory management for better performance.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Network QoS misconfiguration; improper bandwidth allocation affecting performance.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Unexpected system behavior observed during specific network communication; investigate and optimize network interactions.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Inefficient API usage in SaaS application 'App-15'; optimize API calls for improved efficiency.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Cloud storage 'bucket-3' high object retrieval latency; performance impact on data access.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Kubernetes cluster cost exceeding expected threshold; optimize resource allocation.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Kubernetes cluster certificate expired; API server connection failed.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   VM 'vm-11' CPU utilization exceeding threshold; performance impact on hosted services.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Network interface 'eth4' in cloud instance 'vm-5' disabled; no network connectivity.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Cloud provider API rate limiting; increased response time for API calls.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Memory pressure detected in Kubernetes pod 'app-9'; potential performance degradation.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Cloud storage 'bucket-3' permission denied; unauthorized access attempt.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Network connectivity issue detected in node 'worker-2' of Kubernetes cluster.
+True Category:  Miscellaneous
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Cloud provider API request queuing; increased response time for API requests.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Device 'router-2' experiencing high CPU temperature; potential hardware failure.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Network egress charges increasing due to inefficient traffic routing; optimize network routing for cost reduction.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Cloud provider API response time degradation; increased latency in API responses.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Connection failure: SSL certificate expired for host 'secure.example.com'.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   VM 'vm-11' with suboptimal CPU utilization; adjust CPU settings for cost efficiency.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Network egress charges exceeding budget due to inefficient CDN configurations; optimize CDN settings for cost reduction.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Kubernetes service 'frontend' unavailable; target pods not ready.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Inefficient resource allocation in SaaS environment; optimize resource usage for improved performance.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Increased response time in SaaS service 'Service-2'; investigate and optimize performance bottlenecks.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Increased database response time in SaaS service 'Service-5'; optimize database configurations for better performance.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Unexpected system behavior reported during specific database operations; investigate and optimize database performance.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Network congestion detected: increased latency across all nodes in the cluster.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-16' storage network congestion; VM disk I/O performance impacted.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Unrecognized system software instability reported; investigate and address software stability issues.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Unrecognized system log files generated; investigate and analyze the purpose and origin of the logs.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Kubernetes pod 'backend-2' excessive network traffic; potential network bottleneck.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Unstable system behavior observed after recent configuration changes; investigate and restore stability.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   VM 'vm-10' disk I/O saturation; increased latency for storage operations.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Unexpected data duplication reported in specific system modules; investigate and eliminate data duplication issues.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Inconsistent data partitioning across distributed databases; ensure proper data partitioning strategies.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Disk I/O latency issue in SaaS platform; optimize storage configurations for better performance.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Network loop detected: spanning tree convergence failure in VLAN 'vlan30'.
+True Category:  Connector
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Unresponsive third-party service integration in SaaS environment; investigate and restore integration functionality.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Insufficient backup and restore procedures in SaaS infrastructure; enhance backup and restore processes for data protection.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Infrastructure scaling failure in SaaS environment; investigate and resolve scalability issues.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Inconsistent data reconciliation across system components; implement uniform data reconciliation mechanisms.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: Unexpected increase in cloud storage costs; investigate storage usage and optimize data retention policies.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Unstable system behavior observed during specific system load conditions; investigate and optimize system scalability.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: Insufficient system error handling; implement robust error handling mechanisms.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Cloud provider API usage inefficiencies leading to cost overruns; monitor and optimize API usage patterns.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: High CPU usage in SaaS application 'App-8'; optimize code and resource utilization for improved performance.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Unresponsive third-party integration in SaaS environment; investigate and restore integration functionality.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Network cable unplugged from device 'switch-6' no physical connectivity.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Unexpected data inconsistency reported; investigate and restore data consistency.
+True Category:  Connector
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Database replication lag in SaaS application 'App-6'; investigate and minimize replication delay.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-7' network adapter failure; VMs may experience network connectivity issues.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Infrastructure scaling issues in SaaS platform; investigate and address scalability bottlenecks.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Configuration inconsistency detected in SaaS infrastructure; investigate and reconcile configuration discrepancies.
+True Category:  Connector
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   VM 'vm-2' underutilized; consider resizing or right-sizing to minimize cost.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Kubernetes pod 'app-2' over-provisioned with resources; optimize resource allocation for cost efficiency.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Kubernetes cluster with unnecessary resource duplication; consolidate and optimize resources for cost reduction.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Inconsistent data serialization across system components; implement uniform data serialization methods.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Database connection pool exhaustion in SaaS application 'App-10'; optimize connection pooling for better scalability.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-6' VMs with excessive resource reservations; adjust reservations for cost optimization.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Inconsistent system error reporting; ensure consistent and informative error messages.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Unexpected system behavior reported after recent software update; investigate and rollback if necessary.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Cloud provider API response time degradation; increased latency in API responses.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   VM 'vm-7' experiencing disk I/O contention; increased latency for storage operations.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Network QoS misconfiguration; improper bandwidth allocation affecting performance.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Inadequate disaster recovery documentation in SaaS infrastructure; update and maintain comprehensive documentation.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Disk failure in cloud instance 'instance-4'; data loss risk, restore from backup.
+True Category:  Connector
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Network device 'firewall-1' crashed; no traffic inspection.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-9' VMs with unoptimized resource sharing; optimize resource allocation and sharing for cost efficiency.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: CPU spikes in Kubernetes node 'worker-5'; potential performance issues for running pods.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Cloud storage 'bucket-2' quota reached; unable to write new data.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Kubernetes pod 'frontend-5' repeatedly crashing; application instability.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Network interface 'eth3' in Kubernetes node 'worker-4' not responding; hardware failure.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   VM 'vm-5' disk space utilization nearing capacity; potential performance degradation.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Inconsistent system clock synchronization; investigate and restore accurate timekeeping.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Kubernetes node 'worker-4' experiencing high memory usage; performance degradation.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Alert: Unexpected increase in cloud compute costs; analyze workload patterns and optimize resource allocation.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Kubernetes pod 'app-6' with unnecessary database connections; minimize database usage for cost savings.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Kubernetes pod 'webserver-2' excessive memory usage; potential memory leak impacting performance.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Increased memory leaks in SaaS service 'Service-6'; investigate and resolve memory management issues.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Connection dropped: load balancer 'lb-3' unable to distribute traffic; backend failure.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-17' CPU thermal throttling; VM performance impacted by CPU frequency reduction.
+True Category:  Performance
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   VM 'vm-8' memory ballooning; increased swapping impacting performance.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-3' storage latency spike; VM disk performance affected.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Kubernetes pod 'webserver-3' unable to access persistent volume; storage backend issue.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Inconsistent data synchronization across SaaS instances; investigate and ensure data consistency.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Cloud provider API usage exceeding allocated budget; monitor and optimize API usage patterns.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Network switch 'switch-3' buffer overflow; increased latency and packet loss.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Kubernetes pod 'backend-1' excessive network traffic; potential network bottleneck.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Cloud provider authentication token expired; update credentials for 'account-2'.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Configuration drift detected in SaaS environment; investigate and align configurations for consistency.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Connection timeout: no response from remote server 'api.example.com'.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Unresponsive system backup process; investigate and ensure successful backup operations.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Network transfer costs impacted by inefficient data compression techniques; optimize data compression for cost savings.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Connection refused: remote server 'db.example.com' not accepting connections.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Unresponsive system task execution; investigate and restore task execution functionality.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Cloud resource 'database-1' experiencing high CPU utilization; performance impact.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Memory ballooning observed in Kubernetes node 'worker-4'; potential performance impact.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Network connectivity issue impacting SaaS service availability; investigate and resolve network problems.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Unexpected system behavior reported during specific user interactions; investigate and address user-specific issues.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   CPU utilization spike detected in cloud server 'instance-3'.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Unexpected system file system errors reported; investigate and resolve file system errors.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Network congestion detected on switch 'switch-3'; performance degradation.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Kubernetes pod 'app-10' with excessive external service calls; minimize external service usage for cost savings.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Inefficient caching mechanism in SaaS infrastructure; optimize caching strategies for improved performance.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Inconsistent network latency between cloud regions; cross-region communication affected.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Unexpected application behavior reported; investigate and resolve the anomaly.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: Network congestion observed in SaaS environment; investigate and optimize network traffic for smoother operation.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Network switch 'switch-2' interface errors; potential connectivity issues and performance degradation.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   VM 'vm-5' with suboptimal cost-to-performance ratio; consider migrating to a more cost-effective solution.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Inconsistent data migration across system versions; ensure smooth data migration between versions.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Inconsistent system messaging formats; ensure consistent messaging formats across system components.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Unrecognized system process contention observed; investigate and resolve process contention issues.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Unstable system behavior observed during heavy network traffic; investigate and optimize network configurations.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Network transfer costs impacted by inefficient data transfer protocols; optimize data transfer methods for cost savings.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Kubernetes cluster scaling inefficiencies; optimize cluster scaling based on workload demand to minimize costs.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Unstable communication between system components; investigate and restore seamless communication.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Unrecognized system software conflict detected; investigate and resolve the software conflict.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Network packet loss observed between cloud regions; potential impact on application performance.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Inadequate disaster recovery testing in SaaS environment; regularly test and verify disaster recovery mechanisms.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: Inconsistent data formatting across system components; implement uniform data formatting standards.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Insufficient redundancy in SaaS infrastructure; implement redundancy measures for improved fault tolerance.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Load balancer misconfiguration in SaaS infrastructure; review and update load balancing settings for optimal traffic distribution.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Network firewall blocking incoming connections to port '8080'.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   VM 'vm-3' network throughput degradation; potential issue with virtual network adapter.
+True Category:  Connector
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Connection failure detected: unable to establish TCP connection to host 'database'.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-11' storage latency degradation; VM disk performance affected.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-10' VMs with unoptimized network bandwidth allocation; optimize network resources for cost reduction.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   DNS resolution failure: unable to resolve hostname 'app.example.com'.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   High network latency observed within datacenter 'DC-3'; internal network congestion.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Cloud provider API usage spikes leading to cost overruns; monitor and optimize API usage patterns.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Cloud provider API usage inefficiencies leading to cost overruns; monitor and optimize API usage patterns.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Hypervisor 'hypervisor-14' storage connectivity problem; VMs may experience disk latency.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Alert: Inconsistent data caching across system layers; ensure uniform data caching strategies.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: Service interruption in SaaS application 'App-12'; investigate and restore service availability.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Network firewall misconfiguration in SaaS infrastructure; review and update firewall rules to ensure proper access control.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Cloud provider authentication failure; verify API key for 'project-1'.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Connection rejected due to security policy on firewall 'fw-1'.
+True Category:  SaaSInfra
+Predicted Category:  SaaSInfra
+-----------------------------------------
+Message:   Kubernetes pod 'app-9' with unnecessary resource requests; adjust resource limits and requests for cost savings.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Connection reset by peer: server terminated the connection unexpectedly.
+True Category:  Performance
+Predicted Category:  Performance
+-----------------------------------------
+Message:   Alert: CPU throttling in Kubernetes pod 'app-3'; performance impacted by resource limitations.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: Unallocated cloud resources incurring costs; review resource provisioning and deprovisioning processes.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Alert: Unresponsive system service discovery mechanism; investigate and restore service discovery functionality.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Message:   Alert: High memory consumption in SaaS platform; potential impact on overall system stability.
+True Category:  Miscellaneous
+Predicted Category:  Miscellaneous
+-----------------------------------------
+Message:   Alert: Inconsistent service availability in SaaS platform; investigate and restore consistent service access.
+True Category:  Connector
+Predicted Category:  Connector
+-----------------------------------------
+Message:   Alert: Authentication service outage in SaaS environment; investigate and restore user authentication functionality.
+True Category:  Costing
+Predicted Category:  Costing
+-----------------------------------------
+Accuracy: 95.15%
+               precision    recall  f1-score   support
+
+    Connector       1.00      0.77      0.87        26
+      Costing       1.00      1.00      1.00        40
+Miscellaneous       1.00      0.97      0.99        37
+  Performance       1.00      0.97      0.98        32
+    SaaSInfra       0.79      1.00      0.88        30
+
+     accuracy                           0.95       165
+    macro avg       0.96      0.94      0.94       165
+ weighted avg       0.96      0.95      0.95       165
+
+Confusion Matrix:
+[[20  0  0  0  6]
+ [ 0 40  0  0  0]
+ [ 0  0 36  0  1]
+ [ 0  0  0 31  1]
+ [ 0  0  0  0 30]]
+Connection closed
+
+Process finished with exit code 0
