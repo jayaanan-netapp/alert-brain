@@ -1,6 +1,3 @@
-import openpyxl
-import re
-import pandas as pd
 import mysql.connector
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
@@ -10,16 +7,20 @@ from sklearn.model_selection import train_test_split
 from sklearn import metrics
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.decomposition import NMF
-import re
-
-import openpyxl
 import pandas as pd
-import numpy as np
-import random
 import tensorflow as tf
 from sklearn.model_selection import train_test_split
 from transformers import TFBertModel, BertTokenizer
 from sklearn.metrics import classification_report, confusion_matrix
+
+import re
+
+import openpyxl
+from transformers import Trainer, TrainingArguments, DistilBertForSequenceClassification, DistilBertTokenizerFast, \
+     DataCollatorWithPadding, pipeline
+from datasets import Dataset, metric
+import numpy as np
+import evaluate
 
 '''CREATE TABLE `alerts` (
 	`id` INT(10) NOT NULL AUTO_INCREMENT,
@@ -55,12 +56,23 @@ class AlertBrain:
             database=database)
         self.conn.connect()
         self.cursor = self.conn.cursor()
+        self.tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-cased')
+        self.metric = evaluate.load("accuracy")
 
     def close(self):
         self.cursor.close()
         if self.conn.is_connected():
             self.conn.close()
             print("Connection closed")
+
+    def compute_metrics(self, eval_pred):  # custom method to take in logits and calculate accuracy of the eval set
+        logits, labels = eval_pred
+        predictions = np.argmax(logits, axis=-1)
+        return self.metric.compute(predictions=predictions, references=labels)
+
+    # simple function to batch tokenize utterances with truncation
+    def preprocess_function(self, examples):
+        return self.tokenizer(examples["utterance"], truncation=True)
 
     def load_and_clean_data(self, file_path, sheet_name):
         # Open the Excel file
@@ -195,141 +207,117 @@ class AlertBrain:
         self.execute_supervised_learning_modal(text_clf_lsvc, 'svm_category')
 
     def deep_learning(self):
-        # Load BERT model and tokenizer
-        bert_model = TFBertModel.from_pretrained('bert-base-uncased')
-        tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-        category_data = {}
+        wb = openpyxl.load_workbook('C:/Users/jayaanan/Downloads/Alerts_Data1.xlsx')
+        # Get the second sheet
+        sheet = wb['Sheet2']
+        utterances = []
+        sequence_labels = []
 
-        # Group data by category
-        grouped_data = self.df.groupby('category')
+        for row in sheet.iter_rows(values_only=True):
+            # Convert any None values to NULL
+            row = [value if value is not None else 'NULL' for value in row]
+            alerts = row[1].splitlines()
+            # print(alerts)
+            # Using a for loop
+            for string in alerts:
+                alert = re.sub(r"\b\d+\.", "", string, count=1)
+                utterances.append(alert)
+                sequence_labels.append(row[0])
 
-        '''for name_of_the_group, group in grouped_data:
-            print(name_of_the_group)
-            print(group)'''
+        print('length of all tokens', len(utterances), len(sequence_labels))
+        print('first utterance', utterances[0], 'sequence label', sequence_labels[0])
+        tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-cased')
+        unique_sequence_labels = list(set(sequence_labels))
+        print('unique_sequence_labels-->', unique_sequence_labels)
+        sequence_labels = [unique_sequence_labels.index(l) for l in sequence_labels]
+        print(f'There are {len(unique_sequence_labels)} unique sequence labels')
 
-        # Iterate over each category and randomly select data for training
-        for category, group in grouped_data:
-            indices = group.index.tolist()
-            selected_indices = np.array(indices)  # Convert to numpy array
-            np.random.shuffle(selected_indices)  # Shuffle the indices
-            category_data[category] = group.loc[selected_indices.tolist()]  # Convert back to list
+        print('utterances', utterances[0], len(utterances))
+        print('sequence_labels', sequence_labels[0], len(sequence_labels))
+        print(unique_sequence_labels[sequence_labels[0]])
 
-        # Concatenate the data from different categories
-        selected_data = pd.concat(category_data.values(), ignore_index=True)
-        # print('selected_data-->', selected_data)
-        # Shuffle the selected data
-        selected_data = selected_data.sample(frac=1).reset_index(drop=True)
-        # print('Shuffle_data-->', selected_data)
-        # Tokenize alert messages
-        input_ids = []
-        attention_masks = []
-
-        for message in selected_data['message']:
-            encoded_message = tokenizer.encode_plus(
-                message,
-                add_special_tokens=True,
-                max_length=512,
-                pad_to_max_length=True,
-                return_attention_mask=True,
-                return_tensors='tf'
+        snips_dataset = Dataset.from_dict(
+            dict(
+                utterance=utterances,
+                label=sequence_labels
             )
-
-            input_ids.append(encoded_message['input_ids'])
-            attention_masks.append(encoded_message['attention_mask'])
-
-        input_ids = tf.concat(input_ids, axis=0)
-        attention_masks = tf.concat(attention_masks, axis=0)
-
-        # Define BERT-based classification model
-        input_ids_input = tf.keras.layers.Input(shape=(512,), dtype=tf.int32)
-        attention_mask_input = tf.keras.layers.Input(shape=(512,), dtype=tf.int32)
-        bert_output = bert_model(input_ids_input, attention_mask=attention_mask_input)[1]  # Use pooled output
-        output = tf.keras.layers.Dense(5, activation='softmax')(bert_output)  # 5 categories
-
-        model = tf.keras.models.Model(inputs=[input_ids_input, attention_mask_input], outputs=output)
-
-        # Compile and train the model
-        optimizer = tf.keras.optimizers.Adam(learning_rate=1e-5)
-        model.compile(optimizer=optimizer, loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-
-        # Prepare the training labels
-        labels = pd.Categorical(selected_data['category'])
-        labels = labels.codes  # Convert categories to numerical codes
-
-        # Convert tensors to numpy arrays
-        input_ids_np = input_ids.numpy()
-        attention_masks_np = attention_masks.numpy()
-        labels_np = labels
-
-        # Split the data into training and evaluation sets
-        train_input_ids, eval_input_ids, train_attention_masks, eval_attention_masks, train_labels, eval_labels = \
-            train_test_split(input_ids_np, attention_masks_np, labels_np, test_size=0.33, random_state=42)
-        # print('split data-->',train_input_ids, eval_input_ids, train_attention_masks, eval_attention_masks, train_labels, eval_labels  )
-        # Train the model
-        model.fit(
-            x=[train_input_ids, train_attention_masks],
-            y=train_labels,
-            batch_size=32,
-            epochs=5
         )
 
-        # Evaluate the model
-        eval_predictions = model.predict([eval_input_ids, eval_attention_masks])
-        eval_predicted_labels = np.argmax(eval_predictions, axis=1)
+        snips_dataset = snips_dataset.train_test_split(test_size=0.2)
+        print(snips_dataset)
 
-        # Map labels to categories
-        category_map = {
-            0: 'Connector',
-            1: 'Performance',
-            2: 'Costing',
-            3: 'SaaSInfra',
-            4: 'Miscellaneous'
-        }
-        # Convert eval_labels to Pandas Series
-        eval_labels = pd.Series(eval_labels)
+        #print(tokenizer('hi'))
+        #print(tokenizer.decode([101, 2603, 1142, 18977, 126, 2940, 102]))
 
-        eval_predicted_categories = [category_map[label] for label in eval_predicted_labels]
-        eval_true_categories = [category_map[label] for label in eval_labels]
+        seq_clf_tokenized_snips = snips_dataset.map(self.preprocess_function, batched=True)
 
-        eval_messages = selected_data.loc[eval_labels.index, 'message'].tolist()
+        # only input_ids, attention_mask, and label are used. The rest are for show
+        #print(seq_clf_tokenized_snips['train'][0])
 
-        # Print test messages and predictions
-        print("Test Messages:")
-        for message, true_category, predicted_category in zip(eval_messages, eval_true_categories,
-                                                              eval_predicted_categories):
-            print("Message: ", message)
-            print("True Category: ", true_category)
-            print("Predicted Category: ", predicted_category)
-            print("-----------------------------------------")
+        # DataCollatorWithPadding creates batch of data. It also dynamically pads text to the
+        #  length of the longest element in the batch, making them all the same length.
+        #  It's possible to pad your text in the tokenizer function with padding=True, dynamic padding is more efficient.
+
+        data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
+        #print({i: l for i, l in enumerate(unique_sequence_labels)})
+
+        sequence_clf_model = DistilBertForSequenceClassification.from_pretrained(
+            'distilbert-base-cased',
+            num_labels=len(unique_sequence_labels),
+        )
+
+        # set an index -> label dictionary
+        sequence_clf_model.config.id2label = {i: l for i, l in enumerate(unique_sequence_labels)}
+        print(sequence_clf_model.config.id2label[0])
+
+        epochs = 5
+
+        training_args = TrainingArguments(
+            output_dir="./alert_brain/results",
+            num_train_epochs=epochs,
+            per_device_train_batch_size=32,
+            per_device_eval_batch_size=32,
+            load_best_model_at_end=True,
+
+            # some deep learning parameters that the Trainer is able to take in
+            warmup_steps=len(seq_clf_tokenized_snips['train']) // 5,
+            # number of warmup steps for learning rate scheduler,
+            weight_decay=0.05,
+
+            logging_steps=1,
+            log_level='info',
+            evaluation_strategy='epoch',
+            eval_steps=50,
+            save_strategy='epoch'
+        )
+
+        # Define the trainer:
+
+        trainer = Trainer(
+            model=sequence_clf_model,
+            args=training_args,
+            train_dataset=seq_clf_tokenized_snips['train'],
+            eval_dataset=seq_clf_tokenized_snips['test'],
+            compute_metrics=self.compute_metrics,  # optional
+            data_collator=data_collator
+        )
+        print(trainer.evaluate())
+        trainer.train()
+        print(trainer.evaluate())
+        trainer.save_model()
+        # We can now load our fine-tuned from our directory
+        pipe = pipeline("text-classification", "./alert_brain/results", tokenizer=tokenizer)
+
+        for index, utterance in enumerate(utterances):
+            prediction = pipe(utterance)
+            #print(utterance, prediction, sequence_labels[index])
             query = 'SELECT * FROM alerts WHERE message = %s'
-            self.cursor.execute(query, (message,))
-            rows = self.cursor.fetchall()
-            for data_row in rows:
-                query = 'UPDATE alerts SET bert_category = %s WHERE id = %s'
-                self.cursor.execute(query, (predicted_category, data_row[0]))
-        self.conn.commit()
-        train_labels_series = pd.Series(train_labels)
-        train_messages = selected_data.loc[train_labels_series, 'message'].tolist()
-        for train in train_messages:
-            query = 'SELECT * FROM alerts WHERE message = %s'
-            self.cursor.execute(query, (train,))
+            self.cursor.execute(query, (utterance,))
             rows = self.cursor.fetchall()
             for row in rows:
                 query = f"UPDATE alerts SET bert_category = %s WHERE id = %s"
-                self.cursor.execute(query, (row[2], row[0]))
+                self.cursor.execute(query, (prediction[0]['label'], row[0]))
         self.conn.commit()
-        # Calculate accuracy
-        accuracy = np.sum(np.array(eval_predicted_categories) == np.array(eval_true_categories)) / len(
-            eval_true_categories)
-        print("Accuracy: {:.2%}".format(accuracy))
-
-        # Generate classification report
-        print(classification_report(eval_true_categories, eval_predicted_categories))
-
-        # Generate confusion matrix
-        confusion_mat = confusion_matrix(eval_true_categories, eval_predicted_categories)
-        print("Confusion Matrix:")
-        print(confusion_mat)
 
 
 if __name__ == '__main__':
